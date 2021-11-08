@@ -23,6 +23,7 @@
 		FF7069BB27394BD600E71F48 /* FruitNutrientsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7069BA27394BD600E71F48 /* FruitNutrientsView.swift */; };
 		FF7069BD27394E3700E71F48 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7069BC27394E3700E71F48 /* SettingsView.swift */; };
 		FF7069BF273950D100E71F48 /* SettingsLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7069BE273950D100E71F48 /* SettingsLabelView.swift */; };
+		FF7069C1273952E500E71F48 /* SettingsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7069C0273952E500E71F48 /* SettingsRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		FF7069BA27394BD600E71F48 /* FruitNutrientsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitNutrientsView.swift; sourceTree = "<group>"; };
 		FF7069BC27394E3700E71F48 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		FF7069BE273950D100E71F48 /* SettingsLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsLabelView.swift; sourceTree = "<group>"; };
+		FF7069C0273952E500E71F48 /* SettingsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,9 +114,10 @@
 				FF7069B62739424300E71F48 /* FruitHeaderView.swift */,
 				FF7069BA27394BD600E71F48 /* FruitNutrientsView.swift */,
 				FF7069B227393DDF00E71F48 /* FruitRowView.swift */,
+				FF7069BE273950D100E71F48 /* SettingsLabelView.swift */,
+				FF7069C0273952E500E71F48 /* SettingsRowView.swift */,
 				FF7069B8273943B000E71F48 /* SourceLinkView.swift */,
 				FF7069A827390EF900E71F48 /* StartButtonView.swift */,
-				FF7069BE273950D100E71F48 /* SettingsLabelView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 			files = (
 				FF7069B1273938B000E71F48 /* FruitData.swift in Sources */,
 				FF7069B9273943B000E71F48 /* SourceLinkView.swift in Sources */,
+				FF7069C1273952E500E71F48 /* SettingsRowView.swift in Sources */,
 				FF7069A72739024700E71F48 /* FruitCardView.swift in Sources */,
 				FF7069B327393DDF00E71F48 /* FruitRowView.swift in Sources */,
 				FF7069BB27394BD600E71F48 /* FruitNutrientsView.swift in Sources */,
