@@ -4,7 +4,7 @@ import SwiftUI
 struct FructusApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            OnboardingView()
         }
     }
 }
