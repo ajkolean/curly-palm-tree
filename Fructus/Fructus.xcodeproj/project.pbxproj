@@ -16,6 +16,7 @@
 		FF7069AB2739119F00E71F48 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7069AA2739119F00E71F48 /* OnboardingView.swift */; };
 		FF7069AE2739380100E71F48 /* FruitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7069AD2739380100E71F48 /* FruitModel.swift */; };
 		FF7069B1273938B000E71F48 /* FruitData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7069B0273938B000E71F48 /* FruitData.swift */; };
+		FF7069B327393DDF00E71F48 /* FruitRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7069B227393DDF00E71F48 /* FruitRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		FF7069AA2739119F00E71F48 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		FF7069AD2739380100E71F48 /* FruitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitModel.swift; sourceTree = "<group>"; };
 		FF7069B0273938B000E71F48 /* FruitData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitData.swift; sourceTree = "<group>"; };
+		FF7069B227393DDF00E71F48 /* FruitRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 			children = (
 				FF7069A62739024700E71F48 /* FruitCardView.swift */,
 				FF7069A827390EF900E71F48 /* StartButtonView.swift */,
+				FF7069B227393DDF00E71F48 /* FruitRowView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 			files = (
 				FF7069B1273938B000E71F48 /* FruitData.swift in Sources */,
 				FF7069A72739024700E71F48 /* FruitCardView.swift in Sources */,
+				FF7069B327393DDF00E71F48 /* FruitRowView.swift in Sources */,
 				FF7069A927390EF900E71F48 /* StartButtonView.swift in Sources */,
 				FF7069992738FEC400E71F48 /* ContentView.swift in Sources */,
 				FF7069AB2739119F00E71F48 /* OnboardingView.swift in Sources */,
