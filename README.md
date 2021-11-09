@@ -29,4 +29,4 @@ A collection of practice Apps using SwiftUI 3
 - Learn how to use the new Goup Box View in SwiftUI 2.0 
 - Learn how to use the new Disclosure View in SwiftUI 2.0 How to display views dynamically in a List View with a loop
 
-<img src="https://github.com/ajkolean/curly-palm-tree/blob/main/Restart/restartAppGif.gif" width="300" height="600" />
+<img src="https://github.com/ajkolean/curly-palm-tree/blob/main/Fructus/fructusAppGif.gif" width="300" height="600" />
