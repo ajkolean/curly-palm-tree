@@ -1,6 +1,8 @@
 import Foundation
 
 extension Bundle {
+    static let animals: [Animal] = Bundle.main.decode("animals.json")
+
     func decode<T: Codable>(_ file: String) -> T {
         guard let url = url(forResource: file, withExtension: nil) else {
             fatalError("Failed to locate \(file) in bundle")
