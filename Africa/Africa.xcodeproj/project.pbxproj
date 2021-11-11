@@ -46,6 +46,7 @@
 		FFC5DA83273D2C9A000D39DC /* VideoPlayerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC5DA82273D2C9A000D39DC /* VideoPlayerHelper.swift */; };
 		FFC5DA85273D40AC000D39DC /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC5DA84273D40AC000D39DC /* LocationModel.swift */; };
 		FFC5DA87273D4327000D39DC /* MapAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC5DA86273D4327000D39DC /* MapAnnotationView.swift */; };
+		FFC5DA89273D4742000D39DC /* MotionAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC5DA88273D4742000D39DC /* MotionAnimationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +91,7 @@
 		FFC5DA82273D2C9A000D39DC /* VideoPlayerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerHelper.swift; sourceTree = "<group>"; };
 		FFC5DA84273D40AC000D39DC /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
 		FFC5DA86273D4327000D39DC /* MapAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAnnotationView.swift; sourceTree = "<group>"; };
+		FFC5DA88273D4742000D39DC /* MotionAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionAnimationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +207,7 @@
 				FF1C5CAD273C0CDC0010F279 /* InsetGalleryView.swift */,
 				FFC5DA77273D1693000D39DC /* InsetMapView.swift */,
 				FFC5DA86273D4327000D39DC /* MapAnnotationView.swift */,
+				FFC5DA88273D4742000D39DC /* MotionAnimationView.swift */,
 				FFC5DA7D273D21D2000D39DC /* VideoListItemView.swift */,
 				FFC5DA7F273D2BE8000D39DC /* VideoPlayerView.swift */,
 			);
@@ -343,6 +346,7 @@
 				FF1C5CAE273C0CDC0010F279 /* InsetGalleryView.swift in Sources */,
 				FFC5DA7E273D21D2000D39DC /* VideoListItemView.swift in Sources */,
 				FF1C5CA4273BFF2B0010F279 /* CodableBundleExtension.swift in Sources */,
+				FFC5DA89273D4742000D39DC /* MotionAnimationView.swift in Sources */,
 				FF1C5CAC273C0AE00010F279 /* HeadingView.swift in Sources */,
 				FFC5DA80273D2BE8000D39DC /* VideoPlayerView.swift in Sources */,
 			);
