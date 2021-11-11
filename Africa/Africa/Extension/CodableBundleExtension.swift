@@ -2,6 +2,7 @@ import Foundation
 
 extension Bundle {
     static let animals: [Animal] = Bundle.main.decode("animals.json")
+    static let videos: [Video] = Bundle.main.decode("videos.json")
 
     func decode<T: Codable>(_ file: String) -> T {
         guard let url = url(forResource: file, withExtension: nil) else {
