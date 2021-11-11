@@ -49,7 +49,9 @@
 		FFC5DA89273D4742000D39DC /* MotionAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC5DA88273D4742000D39DC /* MotionAnimationView.swift */; };
 		FFC5DA8B273D54BD000D39DC /* AnimalGridItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC5DA8A273D54BD000D39DC /* AnimalGridItemView.swift */; };
 		FFC5DA91273D596E000D39DC /* Stickers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFC5DA90273D596E000D39DC /* Stickers.xcassets */; };
-		FFC5DA95273D596E000D39DC /* Stickers.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FFC5DA8E273D596B000D39DC /* Stickers.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FFC5DA95273D596E000D39DC /* Stickers.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FFC5DA8E273D596B000D39DC /* Stickers.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FFC5DA9B273D5ADD000D39DC /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC5DA9A273D5ADD000D39DC /* CreditsView.swift */; };
+		FFC5DA9E273D5C64000D39DC /* CenterModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC5DA9D273D5C64000D39DC /* CenterModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +125,9 @@
 		FFC5DA8E273D596B000D39DC /* Stickers.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Stickers.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFC5DA90273D596E000D39DC /* Stickers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Stickers.xcassets; sourceTree = "<group>"; };
 		FFC5DA92273D596E000D39DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFC5DA9A273D5ADD000D39DC /* CreditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsView.swift; sourceTree = "<group>"; };
+		FFC5DA9D273D5C64000D39DC /* CenterModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterModifier.swift; sourceTree = "<group>"; };
+		FFC5DA9F273D5CF5000D39DC /* Africa.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Africa.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +162,8 @@
 		FF1C5C64273BF7490010F279 /* Africa */ = {
 			isa = PBXGroup;
 			children = (
+				FFC5DA9F273D5CF5000D39DC /* Africa.entitlements */,
+				FFC5DA9C273D5C4D000D39DC /* Modifier */,
 				FF1C5C92273BF9C50010F279 /* App */,
 				FF1C5C88273BF8A80010F279 /* Data */,
 				FF1C5CA2273BFF160010F279 /* Extension */,
@@ -244,6 +251,7 @@
 				FFC5DA88273D4742000D39DC /* MotionAnimationView.swift */,
 				FFC5DA7D273D21D2000D39DC /* VideoListItemView.swift */,
 				FFC5DA7F273D2BE8000D39DC /* VideoPlayerView.swift */,
+				FFC5DA9A273D5ADD000D39DC /* CreditsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -282,6 +290,14 @@
 				FFC5DA92273D596E000D39DC /* Info.plist */,
 			);
 			path = Stickers;
+			sourceTree = "<group>";
+		};
+		FFC5DA9C273D5C4D000D39DC /* Modifier */ = {
+			isa = PBXGroup;
+			children = (
+				FFC5DA9D273D5C64000D39DC /* CenterModifier.swift */,
+			);
+			path = Modifier;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -418,8 +434,10 @@
 				FFC5DA8B273D54BD000D39DC /* AnimalGridItemView.swift in Sources */,
 				FF1C5CAE273C0CDC0010F279 /* InsetGalleryView.swift in Sources */,
 				FFC5DA7E273D21D2000D39DC /* VideoListItemView.swift in Sources */,
+				FFC5DA9B273D5ADD000D39DC /* CreditsView.swift in Sources */,
 				FF1C5CA4273BFF2B0010F279 /* CodableBundleExtension.swift in Sources */,
 				FFC5DA89273D4742000D39DC /* MotionAnimationView.swift in Sources */,
+				FFC5DA9E273D5C64000D39DC /* CenterModifier.swift in Sources */,
 				FF1C5CAC273C0AE00010F279 /* HeadingView.swift in Sources */,
 				FFC5DA80273D2BE8000D39DC /* VideoPlayerView.swift in Sources */,
 			);
@@ -430,6 +448,7 @@
 /* Begin PBXTargetDependency section */
 		FFC5DA94273D596E000D39DC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
+			platformFilter = ios;
 			target = FFC5DA8D273D596B000D39DC /* Stickers */;
 			targetProxy = FFC5DA93273D596E000D39DC /* PBXContainerItemProxy */;
 		};
@@ -557,6 +576,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Africa/Africa.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Africa/Preview Content\"";
@@ -576,6 +596,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kolean.andy.Africa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -587,6 +608,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Africa/Africa.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Africa/Preview Content\"";
@@ -606,6 +628,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kolean.andy.Africa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -627,6 +650,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kolean.andy.Africa.Stickers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -647,6 +671,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kolean.andy.Africa.Stickers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
