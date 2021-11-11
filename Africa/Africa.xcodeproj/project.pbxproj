@@ -47,6 +47,7 @@
 		FFC5DA85273D40AC000D39DC /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC5DA84273D40AC000D39DC /* LocationModel.swift */; };
 		FFC5DA87273D4327000D39DC /* MapAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC5DA86273D4327000D39DC /* MapAnnotationView.swift */; };
 		FFC5DA89273D4742000D39DC /* MotionAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC5DA88273D4742000D39DC /* MotionAnimationView.swift */; };
+		FFC5DA8B273D54BD000D39DC /* AnimalGridItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC5DA8A273D54BD000D39DC /* AnimalGridItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +93,7 @@
 		FFC5DA84273D40AC000D39DC /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
 		FFC5DA86273D4327000D39DC /* MapAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAnnotationView.swift; sourceTree = "<group>"; };
 		FFC5DA88273D4742000D39DC /* MotionAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionAnimationView.swift; sourceTree = "<group>"; };
+		FFC5DA8A273D54BD000D39DC /* AnimalGridItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalGridItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				FF1C5CA9273C051F0010F279 /* AnimalDetailView.swift */,
+				FFC5DA8A273D54BD000D39DC /* AnimalGridItemView.swift */,
 				FF1C5CA5273C02420010F279 /* AnimalListItemView.swift */,
 				FF1C5C9D273BFC9D0010F279 /* CoverImageView.swift */,
 				FFC5DA79273D1A2A000D39DC /* ExternalWeblinkView.swift */,
@@ -343,6 +346,7 @@
 				FFC5DA7C273D218E000D39DC /* VideoModel.swift in Sources */,
 				FF1C5C99273BFAD90010F279 /* GalleryView.swift in Sources */,
 				FFC5DA85273D40AC000D39DC /* LocationModel.swift in Sources */,
+				FFC5DA8B273D54BD000D39DC /* AnimalGridItemView.swift in Sources */,
 				FF1C5CAE273C0CDC0010F279 /* InsetGalleryView.swift in Sources */,
 				FFC5DA7E273D21D2000D39DC /* VideoListItemView.swift in Sources */,
 				FF1C5CA4273BFF2B0010F279 /* CodableBundleExtension.swift in Sources */,
