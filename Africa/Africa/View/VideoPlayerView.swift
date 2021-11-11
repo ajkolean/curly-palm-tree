@@ -11,6 +11,7 @@ struct VideoPlayerView: View {
     var body: some View {
         VStack {
             VideoPlayer(player: playerVideo(fileName: videoSelected, fileFormat: "mp4")) {
+                // Can use the below to embed other views inside video player
                 //Text(videoTitle)
             }
             .overlay(
