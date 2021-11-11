@@ -44,6 +44,7 @@
 		FFC5DA7E273D21D2000D39DC /* VideoListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC5DA7D273D21D2000D39DC /* VideoListItemView.swift */; };
 		FFC5DA80273D2BE8000D39DC /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC5DA7F273D2BE8000D39DC /* VideoPlayerView.swift */; };
 		FFC5DA83273D2C9A000D39DC /* VideoPlayerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC5DA82273D2C9A000D39DC /* VideoPlayerHelper.swift */; };
+		FFC5DA85273D40AC000D39DC /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC5DA84273D40AC000D39DC /* LocationModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +87,7 @@
 		FFC5DA7D273D21D2000D39DC /* VideoListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListItemView.swift; sourceTree = "<group>"; };
 		FFC5DA7F273D2BE8000D39DC /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
 		FFC5DA82273D2C9A000D39DC /* VideoPlayerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerHelper.swift; sourceTree = "<group>"; };
+		FFC5DA84273D40AC000D39DC /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +213,7 @@
 			children = (
 				FF1C5CA7273C034F0010F279 /* AnimalModel.swift */,
 				FF1C5CA0273BFE600010F279 /* CoverImageModel.swift */,
+				FFC5DA84273D40AC000D39DC /* LocationModel.swift */,
 				FFC5DA7B273D218E000D39DC /* VideoModel.swift */,
 			);
 			path = Model;
@@ -332,6 +335,7 @@
 				FF1C5C95273BFA4F0010F279 /* VideoListView.swift in Sources */,
 				FFC5DA7C273D218E000D39DC /* VideoModel.swift in Sources */,
 				FF1C5C99273BFAD90010F279 /* GalleryView.swift in Sources */,
+				FFC5DA85273D40AC000D39DC /* LocationModel.swift in Sources */,
 				FF1C5CAE273C0CDC0010F279 /* InsetGalleryView.swift in Sources */,
 				FFC5DA7E273D21D2000D39DC /* VideoListItemView.swift in Sources */,
 				FF1C5CA4273BFF2B0010F279 /* CodableBundleExtension.swift in Sources */,
