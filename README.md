@@ -16,6 +16,7 @@ A collection of practice Apps using SwiftUI 3
 
 <img src="https://github.com/ajkolean/curly-palm-tree/blob/main/Restart/restartAppGif.gif" width="300" height="600" />
 
+
 # Fructus App
 
 ## Featured Objectives
@@ -33,6 +34,7 @@ A collection of practice Apps using SwiftUI 3
 ## Preview
 
 <img src="https://github.com/ajkolean/curly-palm-tree/blob/main/Fructus/fructusAppGif.gif" width="300" height="600" />
+
 
 # Africa App
 
@@ -59,8 +61,22 @@ A collection of practice Apps using SwiftUI 3
 <img src="https://github.com/ajkolean/curly-palm-tree/blob/main/Africa/africaMacAppGif.gif" width="320" height="376" />
 
 
+# Touchdown App
 
+## Featured Objectives
 
+- How to prototype an E-commerce app with SwiftUI 2.0 
+- Learn how to the @Environment property wrapper works
+- How to use the Observable Object property wrapper
+- How to share the data model across the whole app 
+- How to develop a custom navigation bar
+- How to create a custom shape with Shape Path Learn why to store all constants in a separate file
+- Proportionally resize an item in Page Tab view
+- Learn how to create horizontal grid layouts in SwiftUI
+- Learn how to decode JSON files and fetch data with SwiftUI
 
+## Preview
+
+<img src="https://github.com/ajkolean/curly-palm-tree/blob/main/Touchdown/touchdownAppGif.gif" width="300" height="600" />
 
 
