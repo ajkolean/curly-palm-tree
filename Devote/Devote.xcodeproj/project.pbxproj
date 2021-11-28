@@ -16,6 +16,7 @@
 		FFCADD242751B56B007CFC33 /* sound-ding.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FFCADD212751B56B007CFC33 /* sound-ding.mp3 */; };
 		FFCADD252751B56B007CFC33 /* sound-rise.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FFCADD222751B56B007CFC33 /* sound-rise.mp3 */; };
 		FFCADD262751B56B007CFC33 /* sound-tap.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FFCADD232751B56B007CFC33 /* sound-tap.mp3 */; };
+		FFCADD3427542A57007CFC33 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCADD3327542A57007CFC33 /* Constant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		FFCADD222751B56B007CFC33 /* sound-rise.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-rise.mp3"; sourceTree = "<group>"; };
 		FFCADD232751B56B007CFC33 /* sound-tap.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-tap.mp3"; sourceTree = "<group>"; };
 		FFCADD2D2751B5F2007CFC33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFCADD3327542A57007CFC33 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 		FFCADD2A2751B59E007CFC33 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				FFCADD3327542A57007CFC33 /* Constant.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 			files = (
 				FFCADD182751B4F1007CFC33 /* Persistence.swift in Sources */,
 				FFCADD112751B4EF007CFC33 /* ContentView.swift in Sources */,
+				FFCADD3427542A57007CFC33 /* Constant.swift in Sources */,
 				FFCADD1B2751B4F1007CFC33 /* Devote.xcdatamodeld in Sources */,
 				FFCADD0F2751B4EF007CFC33 /* DevoteApp.swift in Sources */,
 			);
