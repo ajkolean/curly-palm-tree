@@ -81,3 +81,23 @@ A collection of practice Apps using SwiftUI 3
 <img src="https://github.com/ajkolean/curly-palm-tree/blob/main/Touchdown/touchdownAppGif.gif" width="300" height="600" />
 
 
+# Devote App
+
+## Featured Objectives
+
+- How to integrate Core Data with the SwiftUI App Life Cycle
+- Get familiar with Xcode's new Core Data template
+- How to create basic Widgets for iPhone and iPad devices 
+- How to develop a custom Toggle style and make a checkbox
+- How to Create, Read, Update and Delete database items
+- How to toggle Light and Dark mode appearances
+- How to store the app's appearance using the App Storage
+- Set up Widgets with different sizes (small, medium, large)
+- How to set up the Preview to test the different Widget sizes
+- Create visual effects with SwiftUI’s blur and color overlay mode
+
+## Preview
+
+<img src="https://github.com/ajkolean/curly-palm-tree/blob/main/Devote/devoteAppGif.gif" width="300" height="600" />
+
+
