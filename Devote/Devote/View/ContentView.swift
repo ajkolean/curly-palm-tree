@@ -7,6 +7,7 @@ struct ContentView: View {
     @AppStorage("isDarkMode") private var isDarkMode = false
     @State private var task = ""
     @State private var showNewTaskItem = false
+    @State private var isAnimating = false
 
     // MARK: - FETCHING DATA
     @Environment(\.managedObjectContext) private var viewContext
@@ -44,6 +45,8 @@ struct ContentView: View {
                         Button(action: {
                             // TOGGLE APPEARANCE
                             isDarkMode.toggle()
+                            playSound(sound: "sound-tap", type: "mp3")
+                            feedback.notificationOccurred(.success)
                         }, label: {
                             Image(systemName: isDarkMode ? "moon.circle.fill" : "moon.circle")
                                 .resizable()
@@ -59,6 +62,8 @@ struct ContentView: View {
                     // MARK: - NEW TASK BUTTON
                     Button(action: {
                         showNewTaskItem = true
+                        playSound(sound: "sound-ding", type: "mp3")
+                        feedback.notificationOccurred(.success)
                     }, label: {
                         Image(systemName: "plus.circle")
                             .font(.system(size: 30, weight: .semibold, design: .rounded))
@@ -92,8 +97,9 @@ struct ContentView: View {
                     .frame(maxWidth: 640)
                 } //: VSTACK
                 .blur(radius: showNewTaskItem ? 8 : 0, opaque: false)
-                .transition(.move(edge: .top))
-                .animation(.easeOut(duration: 0.5))
+                // This implicit animation seems to be broken in Xcode 13
+                .transition(.move(edge: .bottom))
+                .animation(.easeOut(duration: 0.5), value: isAnimating)
 
                 // MARK: - NEW TASK ITEM
                 if showNewTaskItem {
