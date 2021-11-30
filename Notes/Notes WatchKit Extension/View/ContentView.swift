@@ -26,15 +26,71 @@ struct ContentView: View {
                     .foregroundColor(.accentColor)
             } //: HSTACK
             Spacer()
-            Text("\(notes.count)")
+            if notes.count >= 1 {
+                List {
+                    ForEach(0..<notes.count, id: \.self) { i in
+                        HStack {
+                            Capsule()
+                                .frame(width: 4)
+                                .foregroundColor(.accentColor)
+                            Text(notes[i].text)
+                                .lineLimit(1)
+                                .padding(.leading, 5)
+                        } //: HSTACK
+                    } //: LOOP
+                    .onDelete(perform: delete)
+                }
+            } else {
+                Spacer()
+                Image(systemName: "note.text")
+                    .resizable()
+                    .scaledToFit()
+                    .foregroundColor(.gray)
+                    .opacity(0.25)
+                    .padding(25)
+                Spacer()
+            } //: LIST
         } //: VSTACK
         .navigationTitle("Notes")
+        .onAppear {
+            load()
+        }
     }
 
     // MARK: - HELPERS
 
     private func save() {
-        dump(notes)
+        do {
+            let data = try JSONEncoder().encode(notes)
+            let url = getDocumentDirectory().appendingPathComponent("notes")
+            try data.write(to: url)
+        } catch {
+            print("Failed to save data")
+        }
+    }
+
+    private func load() {
+        DispatchQueue.main.async {
+            do {
+                let url = getDocumentDirectory().appendingPathComponent("notes")
+                let data = try Data(contentsOf: url)
+                notes = try JSONDecoder().decode([Note].self, from: data)
+            } catch {
+                // Do nothing
+            }
+        }
+    }
+
+    private func delete(offsets: IndexSet) {
+        withAnimation {
+            notes.remove(atOffsets: offsets)
+            save()
+        }
+    }
+
+    private func getDocumentDirectory() -> URL {
+        let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return path[0]
     }
 }
 
