@@ -17,6 +17,8 @@
 		FF19AC5C27546C06001D9F87 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF19AC5B27546C06001D9F87 /* Preview Assets.xcassets */; };
 		FF66DAD82755F57F003188F1 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF66DAD72755F57F003188F1 /* Note.swift */; };
 		FF66DADA27561FC4003188F1 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF66DAD927561FC4003188F1 /* DetailView.swift */; };
+		FF66DADC2756226D003188F1 /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF66DADB2756226D003188F1 /* CreditsView.swift */; };
+		FF66DADF27562300003188F1 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF66DADE27562300003188F1 /* HeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,8 @@
 		FF19AC5D27546C06001D9F87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF66DAD72755F57F003188F1 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		FF66DAD927561FC4003188F1 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		FF66DADB2756226D003188F1 /* CreditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsView.swift; sourceTree = "<group>"; };
+		FF66DADE27562300003188F1 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +121,7 @@
 		FF19AC5127546C05001D9F87 /* Notes WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				FF66DADD275622F5003188F1 /* Component */,
 				FF66DAD62755F574003188F1 /* Model */,
 				FF66DAD52755F56A003188F1 /* View */,
 				FF19AC5427546C05001D9F87 /* NotesApp.swift */,
@@ -140,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				FF19AC5227546C05001D9F87 /* ContentView.swift */,
+				FF66DADB2756226D003188F1 /* CreditsView.swift */,
 				FF66DAD927561FC4003188F1 /* DetailView.swift */,
 			);
 			path = View;
@@ -151,6 +157,14 @@
 				FF66DAD72755F57F003188F1 /* Note.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		FF66DADD275622F5003188F1 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				FF66DADE27562300003188F1 /* HeaderView.swift */,
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,8 +297,10 @@
 				FF19AC5327546C05001D9F87 /* ContentView.swift in Sources */,
 				FF19AC5527546C05001D9F87 /* NotesApp.swift in Sources */,
 				FF19AC5727546C05001D9F87 /* ComplicationController.swift in Sources */,
+				FF66DADC2756226D003188F1 /* CreditsView.swift in Sources */,
 				FF66DADA27561FC4003188F1 /* DetailView.swift in Sources */,
 				FF66DAD82755F57F003188F1 /* Note.swift in Sources */,
+				FF66DADF27562300003188F1 /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
