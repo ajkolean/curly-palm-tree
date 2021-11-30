@@ -19,6 +19,7 @@
 		FF66DADA27561FC4003188F1 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF66DAD927561FC4003188F1 /* DetailView.swift */; };
 		FF66DADC2756226D003188F1 /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF66DADB2756226D003188F1 /* CreditsView.swift */; };
 		FF66DADF27562300003188F1 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF66DADE27562300003188F1 /* HeaderView.swift */; };
+		FF66DAE12756258A003188F1 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF66DAE02756258A003188F1 /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		FF66DAD927561FC4003188F1 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		FF66DADB2756226D003188F1 /* CreditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsView.swift; sourceTree = "<group>"; };
 		FF66DADE27562300003188F1 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		FF66DAE02756258A003188F1 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 				FF19AC5227546C05001D9F87 /* ContentView.swift */,
 				FF66DADB2756226D003188F1 /* CreditsView.swift */,
 				FF66DAD927561FC4003188F1 /* DetailView.swift */,
+				FF66DAE02756258A003188F1 /* SettingsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF19AC5327546C05001D9F87 /* ContentView.swift in Sources */,
+				FF66DAE12756258A003188F1 /* SettingsView.swift in Sources */,
 				FF19AC5527546C05001D9F87 /* NotesApp.swift in Sources */,
 				FF19AC5727546C05001D9F87 /* ComplicationController.swift in Sources */,
 				FF66DADC2756226D003188F1 /* CreditsView.swift in Sources */,
