@@ -4,6 +4,7 @@ struct ContentView: View {
     // MARK: - PROPERTIES
     
     let headers = headerData
+    let facts = factData
     
     // MARK: - BODY
     var body: some View {
@@ -25,7 +26,23 @@ struct ContentView: View {
                 
                 DishesView()
                     .frame(maxWidth: 640)
-                
+
+                // MARK: - FACTS
+
+                Text("Avocado Facts")
+                    .fontWeight(.bold)
+                    .modifier(TitleModifier())
+
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(alignment: .top, spacing: 60) {
+                        ForEach(facts) { item in
+                            FactsView(fact: item)
+                        }
+                    } //: HSTACK
+                    .padding(.vertical)
+                    .padding(.leading, 60)
+                    .padding(.trailing, 20)
+                } //: SCROLL
                 
                 // MARK: - FOOTER
                 VStack(alignment: .center, spacing: 20) {
