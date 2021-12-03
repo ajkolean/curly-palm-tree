@@ -5,6 +5,7 @@ struct ContentView: View {
     
     let headers = headerData
     let facts = factData
+    let recipes = recipeData
     
     // MARK: - BODY
     var body: some View {
@@ -21,8 +22,7 @@ struct ContentView: View {
                 
                 // MARK: - DISHES
                 Text("Avocado Dishes")
-                    .fontWeight(.bold)
-                    .modifier(TitleModifier())
+                    .titleStyle()
                 
                 DishesView()
                     .frame(maxWidth: 640)
@@ -43,12 +43,23 @@ struct ContentView: View {
                     .padding(.leading, 60)
                     .padding(.trailing, 20)
                 } //: SCROLL
+
+                // MARK: - RECIPE CARDS
+                Text("Avocado Recipes")
+                    .titleStyle()
+
+                VStack(alignment: .center, spacing: 20) {
+                    ForEach(recipes) { item in
+                        RecipeCardView(recipe: item)
+                    } //: LOOP
+                } //: VSTACK
+                .frame(maxWidth: 640)
+                .padding(.horizontal)
                 
                 // MARK: - FOOTER
                 VStack(alignment: .center, spacing: 20) {
                     Text("All About Avocados")
-                        .fontWeight(.bold)
-                        .modifier(TitleModifier())
+                        .titleStyle()
                     
                     Text("Everything you wanted to know about avocados but were to afraid to ask.")
                         .font(.system(.body, design: .serif))
@@ -66,17 +77,9 @@ struct ContentView: View {
     }
 }
 
-struct TitleModifier: ViewModifier {
-    func body(content: Content) -> some View {
-        content
-            .font(.system(.title, design: .serif))
-            .foregroundColor(Color("ColorGreenAdaptive"))
-            .padding(8)
-    }
-}
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .colorSchemes()
     }
 }

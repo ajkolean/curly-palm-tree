@@ -10,6 +10,11 @@
 		FF65BD17275A22D900827FA0 /* FactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF65BD16275A22D900827FA0 /* FactsView.swift */; };
 		FF65BD19275A260700827FA0 /* FactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF65BD18275A260700827FA0 /* FactModel.swift */; };
 		FF65BD1B275A263900827FA0 /* FactData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF65BD1A275A263900827FA0 /* FactData.swift */; };
+		FF65BD1D275A27F600827FA0 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF65BD1C275A27F600827FA0 /* RecipeModel.swift */; };
+		FF65BD1F275A284000827FA0 /* RecipeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF65BD1E275A284000827FA0 /* RecipeData.swift */; };
+		FF65BD21275A288B00827FA0 /* RecipeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF65BD20275A288B00827FA0 /* RecipeCardView.swift */; };
+		FF65BD24275A310200827FA0 /* TitleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF65BD23275A310200827FA0 /* TitleModifier.swift */; };
+		FF65BD26275A352C00827FA0 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF65BD25275A352C00827FA0 /* Utility.swift */; };
 		FFBC83132758A01C00ADC711 /* AvocadosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBC83122758A01C00ADC711 /* AvocadosApp.swift */; };
 		FFBC83152758A01C00ADC711 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBC83142758A01C00ADC711 /* ContentView.swift */; };
 		FFBC83172758A01E00ADC711 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFBC83162758A01E00ADC711 /* Assets.xcassets */; };
@@ -29,6 +34,11 @@
 		FF65BD16275A22D900827FA0 /* FactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsView.swift; sourceTree = "<group>"; };
 		FF65BD18275A260700827FA0 /* FactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactModel.swift; sourceTree = "<group>"; };
 		FF65BD1A275A263900827FA0 /* FactData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactData.swift; sourceTree = "<group>"; };
+		FF65BD1C275A27F600827FA0 /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
+		FF65BD1E275A284000827FA0 /* RecipeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeData.swift; sourceTree = "<group>"; };
+		FF65BD20275A288B00827FA0 /* RecipeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCardView.swift; sourceTree = "<group>"; };
+		FF65BD23275A310200827FA0 /* TitleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleModifier.swift; sourceTree = "<group>"; };
+		FF65BD25275A352C00827FA0 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		FFBC830F2758A01C00ADC711 /* Avocados.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Avocados.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFBC83122758A01C00ADC711 /* AvocadosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvocadosApp.swift; sourceTree = "<group>"; };
 		FFBC83142758A01C00ADC711 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,6 +67,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FF65BD22275A30F000827FA0 /* ViewModifier */ = {
+			isa = PBXGroup;
+			children = (
+				FF65BD23275A310200827FA0 /* TitleModifier.swift */,
+			);
+			path = ViewModifier;
+			sourceTree = "<group>";
+		};
 		FFBC83062758A01C00ADC711 = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +94,7 @@
 		FFBC83112758A01C00ADC711 /* Avocados */ = {
 			isa = PBXGroup;
 			children = (
+				FF65BD22275A30F000827FA0 /* ViewModifier */,
 				FFBC83342758EB6000ADC711 /* App */,
 				FFBC83252758CB6600ADC711 /* View */,
 				FFBC83242758CB6000ADC711 /* Model */,
@@ -92,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				FFBC83192758A01E00ADC711 /* Preview Assets.xcassets */,
+				FF65BD25275A352C00827FA0 /* Utility.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -101,6 +121,7 @@
 			children = (
 				FFBC83322758E9BC00ADC711 /* HeaderData.swift */,
 				FF65BD1A275A263900827FA0 /* FactData.swift */,
+				FF65BD1E275A284000827FA0 /* RecipeData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -110,6 +131,7 @@
 			children = (
 				FFBC83302758E97200ADC711 /* HeaderModel.swift */,
 				FF65BD18275A260700827FA0 /* FactModel.swift */,
+				FF65BD1C275A27F600827FA0 /* RecipeModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -125,6 +147,7 @@
 				FFBC832E2758D69300ADC711 /* HeaderView.swift */,
 				FFBC83372758EB8500ADC711 /* DishesView.swift */,
 				FF65BD16275A22D900827FA0 /* FactsView.swift */,
+				FF65BD20275A288B00827FA0 /* RecipeCardView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -214,11 +237,16 @@
 				FFBC83292758CBD200ADC711 /* RipeningStagesView.swift in Sources */,
 				FFBC83132758A01C00ADC711 /* AvocadosApp.swift in Sources */,
 				FFBC83272758CB9500ADC711 /* AvocadosView.swift in Sources */,
+				FF65BD24275A310200827FA0 /* TitleModifier.swift in Sources */,
 				FFBC83312758E97200ADC711 /* HeaderModel.swift in Sources */,
+				FF65BD1D275A27F600827FA0 /* RecipeModel.swift in Sources */,
+				FF65BD26275A352C00827FA0 /* Utility.swift in Sources */,
 				FFBC83332758E9BC00ADC711 /* HeaderData.swift in Sources */,
 				FFBC83382758EB8500ADC711 /* DishesView.swift in Sources */,
 				FF65BD19275A260700827FA0 /* FactModel.swift in Sources */,
 				FF65BD17275A22D900827FA0 /* FactsView.swift in Sources */,
+				FF65BD21275A288B00827FA0 /* RecipeCardView.swift in Sources */,
+				FF65BD1F275A284000827FA0 /* RecipeData.swift in Sources */,
 				FFBC832F2758D69300ADC711 /* HeaderView.swift in Sources */,
 				FF65BD1B275A263900827FA0 /* FactData.swift in Sources */,
 			);
