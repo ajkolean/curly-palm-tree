@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF65BD17275A22D900827FA0 /* FactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF65BD16275A22D900827FA0 /* FactsView.swift */; };
 		FFBC83132758A01C00ADC711 /* AvocadosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBC83122758A01C00ADC711 /* AvocadosApp.swift */; };
 		FFBC83152758A01C00ADC711 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBC83142758A01C00ADC711 /* ContentView.swift */; };
 		FFBC83172758A01E00ADC711 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFBC83162758A01E00ADC711 /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FF65BD16275A22D900827FA0 /* FactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsView.swift; sourceTree = "<group>"; };
 		FFBC830F2758A01C00ADC711 /* Avocados.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Avocados.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFBC83122758A01C00ADC711 /* AvocadosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvocadosApp.swift; sourceTree = "<group>"; };
 		FFBC83142758A01C00ADC711 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				FFBC832A2758CBFB00ADC711 /* SettingsView.swift */,
 				FFBC832E2758D69300ADC711 /* HeaderView.swift */,
 				FFBC83372758EB8500ADC711 /* DishesView.swift */,
+				FF65BD16275A22D900827FA0 /* FactsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 				FFBC83312758E97200ADC711 /* HeaderModel.swift in Sources */,
 				FFBC83332758E9BC00ADC711 /* HeaderData.swift in Sources */,
 				FFBC83382758EB8500ADC711 /* DishesView.swift in Sources */,
+				FF65BD17275A22D900827FA0 /* FactsView.swift in Sources */,
 				FFBC832F2758D69300ADC711 /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
