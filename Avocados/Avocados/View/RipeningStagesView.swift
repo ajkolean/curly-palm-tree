@@ -3,9 +3,24 @@ import SwiftUI
 struct RipeningStagesView: View {
     // MARK: - PROPERTIES
 
+    let ripeningStages = ripeningData
+
     // MARK: - BODY
     var body: some View {
-        Text("Ripening Stages")
+        ScrollView(.horizontal, showsIndicators: false) {
+            VStack {
+                Spacer()
+                HStack(alignment: .center, spacing: 25) {
+                    ForEach(ripeningStages) { item in
+                        RipeningView(ripening: item)
+                    } //: LOOP
+                } //: HSTACK
+                .padding(.vertical)
+                .padding(.horizontal, 25)
+                Spacer()
+            } //: VSTACK
+        } //: SCROLL
+        .edgesIgnoringSafeArea(.all)
     }
 }
 
