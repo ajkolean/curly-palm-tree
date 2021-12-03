@@ -115,7 +115,10 @@ struct RipeningView: View {
         } //: VSTACK
         .edgesIgnoringSafeArea(.all)
         .onAppear {
-            isSlideAnimation.toggle()
+            isSlideAnimation = true
+        }
+        .onDisappear {
+            isSlideAnimation = false
         }
     }
 }
