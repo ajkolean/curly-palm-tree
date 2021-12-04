@@ -1,6 +1,33 @@
 # curly-palm-tree
 A collection of practice Apps using SwiftUI 3
 
+- [curly-palm-tree](#curly-palm-tree)
+- [Restart App](#restart-app)
+  - [Featured Objectives](#featured-objectives)
+  - [Preview](#preview)
+- [Fructus App](#fructus-app)
+  - [Featured Objectives](#featured-objectives-1)
+  - [Preview](#preview-1)
+- [Africa App](#africa-app)
+  - [Featured Objectives](#featured-objectives-2)
+  - [Preview](#preview-2)
+    - [iPhone](#iphone)
+    - [Mac](#mac)
+- [Touchdown App](#touchdown-app)
+  - [Featured Objectives](#featured-objectives-3)
+  - [Preview](#preview-3)
+- [Devote App](#devote-app)
+  - [Featured Objectives](#featured-objectives-4)
+  - [Preview](#preview-4)
+- [Notes Watch App](#notes-watch-app)
+  - [Featured Objectives](#featured-objectives-5)
+  - [Preview](#preview-5)
+- [Avocados App](#avocados-app)
+  - [Featured Objectives](#featured-objectives-6)
+  - [Preview](#preview-6)
+    - [iPhone (Dark)](#iphone-dark)
+    - [iPad (Light)](#ipad-light)
+
 
 # Restart App
 
