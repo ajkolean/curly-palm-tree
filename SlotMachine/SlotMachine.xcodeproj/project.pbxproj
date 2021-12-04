@@ -21,6 +21,8 @@
 		FF65BD5C275B84FB00827FA0 /* game-over.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FF65BD54275B84FB00827FA0 /* game-over.mp3 */; };
 		FF65BD62275B857F00827FA0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF65BD61275B857F00827FA0 /* Constants.swift */; };
 		FF65BD64275B87ED00827FA0 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF65BD63275B87ED00827FA0 /* Launch Screen.storyboard */; };
+		FF65BD67275BA07700827FA0 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF65BD66275BA07700827FA0 /* LogoView.swift */; };
+		FF65BD69275BA0AC00827FA0 /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF65BD68275BA0AC00827FA0 /* Modifiers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		FF65BD54275B84FB00827FA0 /* game-over.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "game-over.mp3"; sourceTree = "<group>"; };
 		FF65BD61275B857F00827FA0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FF65BD63275B87ED00827FA0 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		FF65BD66275BA07700827FA0 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
+		FF65BD68275BA0AC00827FA0 /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,9 +75,9 @@
 		FF65BD3E275B7E9D00827FA0 /* SlotMachine */ = {
 			isa = PBXGroup;
 			children = (
+				FF65BD65275B94EF00827FA0 /* App */,
 				FF65BD60275B856E00827FA0 /* Utility */,
 				FF65BD5D275B850F00827FA0 /* Sounds */,
-				FF65BD3F275B7E9D00827FA0 /* SlotMachineApp.swift */,
 				FF65BD5E275B851E00827FA0 /* View */,
 				FF65BD43275B7EA000827FA0 /* Assets.xcassets */,
 				FF65BD45275B7EA000827FA0 /* Preview Content */,
@@ -109,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				FF65BD41275B7E9D00827FA0 /* ContentView.swift */,
+				FF65BD66275BA07700827FA0 /* LogoView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -117,8 +122,17 @@
 			isa = PBXGroup;
 			children = (
 				FF65BD61275B857F00827FA0 /* Constants.swift */,
+				FF65BD68275BA0AC00827FA0 /* Modifiers.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		FF65BD65275B94EF00827FA0 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				FF65BD3F275B7E9D00827FA0 /* SlotMachineApp.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,8 +215,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF65BD42275B7E9D00827FA0 /* ContentView.swift in Sources */,
+				FF65BD67275BA07700827FA0 /* LogoView.swift in Sources */,
 				FF65BD40275B7E9D00827FA0 /* SlotMachineApp.swift in Sources */,
 				FF65BD62275B857F00827FA0 /* Constants.swift in Sources */,
+				FF65BD69275BA0AC00827FA0 /* Modifiers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
