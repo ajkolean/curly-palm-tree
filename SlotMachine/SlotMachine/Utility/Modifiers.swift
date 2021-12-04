@@ -60,6 +60,42 @@ struct ImageModifier: ViewModifier {
     }
 }
 
+struct BetCapsuleModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .background(
+                Capsule()
+                    .fill(LinearGradient(colors: [pinkColor, purpleColor], startPoint: .top, endPoint: .bottom))
+                    .padding(3)
+                    .background(
+                        Capsule()
+                            .fill(LinearGradient(colors: [pinkColor, purpleColor], startPoint: .bottom, endPoint: .top))
+                            .shadowModifier()
+                    )
+            )
+    }
+}
+
+struct BetNumberModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.system(.title, design: .rounded))
+            .padding(.vertical, 5)
+            .frame(width: 90)
+            .shadow(color: shadowColor, radius: 0, x: 0, y: 3)
+    }
+}
+
+struct CasinoChipsModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .scaledToFit()
+            .frame(height: 64)
+            .animation(.default)
+            .shadowModifier()
+    }
+}
+
 extension View {
     var typeErased: AnyView { AnyView(self) }
 
@@ -81,6 +117,18 @@ extension View {
 
     func imageModifier() -> some View {
         modifier(ImageModifier())
+    }
+
+    func betNumberModifier() -> some View {
+        modifier(BetNumberModifier())
+    }
+
+    func betCapsuleModifier() -> some View {
+        modifier(BetCapsuleModifier())
+    }
+
+    func casinoChipsModifier() -> some View {
+        modifier(CasinoChipsModifier())
     }
 }
 
