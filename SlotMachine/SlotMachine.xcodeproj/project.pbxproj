@@ -23,6 +23,7 @@
 		FF65BD64275B87ED00827FA0 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF65BD63275B87ED00827FA0 /* Launch Screen.storyboard */; };
 		FF65BD67275BA07700827FA0 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF65BD66275BA07700827FA0 /* LogoView.swift */; };
 		FF65BD69275BA0AC00827FA0 /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF65BD68275BA0AC00827FA0 /* Modifiers.swift */; };
+		FF65BD6F275BAEDD00827FA0 /* ReelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF65BD6E275BAEDD00827FA0 /* ReelView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		FF65BD63275B87ED00827FA0 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		FF65BD66275BA07700827FA0 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 		FF65BD68275BA0AC00827FA0 /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
+		FF65BD6E275BAEDD00827FA0 /* ReelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 			children = (
 				FF65BD41275B7E9D00827FA0 /* ContentView.swift */,
 				FF65BD66275BA07700827FA0 /* LogoView.swift */,
+				FF65BD6E275BAEDD00827FA0 /* ReelView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF65BD6F275BAEDD00827FA0 /* ReelView.swift in Sources */,
 				FF65BD42275B7E9D00827FA0 /* ContentView.swift in Sources */,
 				FF65BD67275BA07700827FA0 /* LogoView.swift in Sources */,
 				FF65BD40275B7E9D00827FA0 /* SlotMachineApp.swift in Sources */,
