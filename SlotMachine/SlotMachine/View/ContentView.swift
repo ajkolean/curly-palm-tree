@@ -10,6 +10,7 @@ struct ContentView: View {
     @State private var betAmount = 10
     @State private var reels = [0, 1, 2]
     @State private var isShowingInfoView = false
+    @State private var isSymbolAnimating = false
 
     private var isActiveBet10: Bool {
         betAmount == 10
@@ -22,7 +23,6 @@ struct ContentView: View {
     private var isShowingModal: Bool {
         coins <= 0
     }
-    
 
     // MARK: - BODY
     var body: some View {
@@ -78,6 +78,12 @@ struct ContentView: View {
                         Image(symbols[reels[0]])
                             .resizable()
                             .imageModifier()
+                            .opacity(isSymbolAnimating ? 1 : 0)
+                            .offset(y: isSymbolAnimating ? 0 : -50)
+                            .animation(symbolAnimation(withRandomRange: 0.5...0.7), value: isSymbolAnimating)
+                            .onAppear {
+                                isSymbolAnimating = true
+                            }
                     } //: ZSTACK
 
                     HStack(alignment: .center, spacing: 0) {
@@ -87,6 +93,12 @@ struct ContentView: View {
                             Image(symbols[reels[1]])
                                 .resizable()
                                 .imageModifier()
+                                .opacity(isSymbolAnimating ? 1 : 0)
+                                .offset(y: isSymbolAnimating ? 0 : -50)
+                                .animation(symbolAnimation(withRandomRange: 0.7...0.9), value: isSymbolAnimating)
+                                .onAppear {
+                                    isSymbolAnimating = true
+                                }
                         } //: ZSTACK
 
                         Spacer()
@@ -97,13 +109,26 @@ struct ContentView: View {
                             Image(symbols[reels[2]])
                                 .resizable()
                                 .imageModifier()
+                                .opacity(isSymbolAnimating ? 1 : 0)
+                                .offset(y: isSymbolAnimating ? 0 : -50)
+                                .animation(symbolAnimation(withRandomRange: 0.9...1.1), value: isSymbolAnimating)
+                                .onAppear {
+                                    isSymbolAnimating = true
+                                }
                         } //: ZSTACK
                     } //: HSTACK
                     .frame(maxWidth: 500)
 
                     // MARK: - SPIN BUTTON
                     Button(action: {
+                        isSymbolAnimating = false
+
                         spinReels()
+
+                        withAnimation {
+                            isSymbolAnimating = true
+                        }
+
                         checkWinning()
                     }, label: {
                         Image("gfx-spin")
@@ -133,14 +158,18 @@ struct ContentView: View {
 
                         Image("gfx-casino-chips")
                             .resizable()
+                            .offset(x: isActiveBet20 ? 0 : 20)
                             .opacity(isActiveBet20 ? 1 : 0)
                             .casinoChipsModifier()
                     } // HSTACK
+
+                    Spacer()
 
                     // MARK: - BET 10
                     HStack(alignment: .center, spacing: 10) {
                         Image("gfx-casino-chips")
                             .resizable()
+                            .offset(x: isActiveBet10 ? 0 : -20)
                             .opacity(isActiveBet10 ? 1 : 0)
                             .casinoChipsModifier()
 
@@ -185,7 +214,10 @@ struct ContentView: View {
 
             // MARK: - POPUP
             if isShowingModal {
-                GameOverModalView(coins: $coins)
+                GameOverModalView() {
+                    coins = 100
+                    activateBet10()
+                }
             }
         } //: ZSTACK
         .sheet(isPresented: $isShowingInfoView) {
@@ -237,6 +269,11 @@ struct ContentView: View {
         highScore = 0
         coins = 100
         activateBet10()
+    }
+
+    private func symbolAnimation(withRandomRange range: ClosedRange<Double>) -> Animation? {
+        // If isAnimating is false returns nil, this causes the animation to not fire in reverse
+        isSymbolAnimating ? .easeOut(duration: Double.random(in: range)) : nil
     }
 }
 

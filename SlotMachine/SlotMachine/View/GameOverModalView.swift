@@ -1,7 +1,12 @@
 import SwiftUI
 
 struct GameOverModalView: View {
-    let coins: Binding<Int>
+    // MARK: - PROPERTIES
+    @State private var isAnimating = false
+
+    let didPressNewGame: (() -> Void)?
+
+    // MARK: - BODY
     var body: some View {
         ZStack {
             shadowColor.edgesIgnoringSafeArea(.all)
@@ -33,7 +38,7 @@ struct GameOverModalView: View {
                         .layoutPriority(1)
 
                     Button(action: {
-                        coins.wrappedValue = 100
+                        didPressNewGame?()
                     }, label: {
                         Text("New Game".uppercased())
                             .font(.system(.body, design: .rounded))
@@ -64,12 +69,23 @@ struct GameOverModalView: View {
             .background(.white)
             .cornerRadius(20)
             .shadow(color: shadowColor, radius: 6, x: 0, y: 8)
+            .opacity($isAnimating.wrappedValue ? 1 : 0)
+            .offset(y: $isAnimating.wrappedValue ? 0 : -100)
+            .onAppear {
+                withAnimation(.spring(response: 0.6, dampingFraction: 1.0, blendDuration: 1.0)) {
+                    isAnimating = true
+                }
+            }
+            .onDisappear {
+                isAnimating = false
+            }
         } //: ZSTACK
     }
 }
 
+// MARK: - PREVIEW
 struct GameOverModalView_Previews: PreviewProvider {
     static var previews: some View {
-        GameOverModalView(coins: .constant(0))
+        GameOverModalView(didPressNewGame: nil)
     }
 }
