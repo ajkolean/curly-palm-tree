@@ -26,15 +26,7 @@ struct ContentView: View {
 
     // MARK: - BODY
     var body: some View {
-        ZStack {
-            // MARK: - BACKGROUND
-            LinearGradient(
-                colors: [pinkColor, purpleColor],
-                startPoint: .top,
-                endPoint: .bottom
-            )
-                .edgesIgnoringSafeArea(.all)
-
+        BackgroundGradientView {
             // MARK: - INTERFACE
             VStack(alignment: .center, spacing: 5) {
                 // MARK: - HEADER
@@ -43,32 +35,7 @@ struct ContentView: View {
                 Spacer()
 
                 // MARK: - SCORE
-                HStack {
-                    HStack {
-                        Text("Your\nCoins".uppercased())
-                            .scoreLabelStyle()
-                            .multilineTextAlignment(.trailing)
-
-                        Text("\(coins)")
-                            .scoreNumberStyle()
-                            .scoreNumberModifier()
-                    } //: HSTACK
-                    .scoreContainerModifier()
-
-                    Spacer()
-
-                    HStack {
-                        Text("\(highScore)")
-                            .scoreNumberStyle()
-                            .scoreNumberModifier()
-
-                        Text("High\nScore".uppercased())
-                            .scoreLabelStyle()
-                            .multilineTextAlignment(.leading)
-
-                    } //: HSTACK
-                    .scoreContainerModifier()
-                } //: HSTACK
+                ScoreView(coins: coins, highScore: highScore)
 
                 // MARK: - SLOT MACCHINE
                 VStack(alignment: .center, spacing: 0) {
@@ -121,15 +88,7 @@ struct ContentView: View {
 
                     // MARK: - SPIN BUTTON
                     Button(action: {
-                        isSymbolAnimating = false
-
-                        spinReels()
-
-                        withAnimation {
-                            isSymbolAnimating = true
-                        }
-
-                        checkWinning()
+                        spin()
                     }, label: {
                         Image("gfx-spin")
                             .renderingMode(.original)
@@ -185,7 +144,6 @@ struct ContentView: View {
 
                     } // HSTACK
                 } //: HSTACK
-
             } //: VSTACK
             // MARK: - BUTTONS
             .overlay(
@@ -226,6 +184,18 @@ struct ContentView: View {
     }
 
     // MARK: - Helpers
+
+    private func spin() {
+        isSymbolAnimating = false
+
+        spinReels()
+
+        withAnimation {
+            isSymbolAnimating = true
+        }
+
+        checkWinning()
+    }
 
     private func spinReels() {
         reels = reels.map { _ in
