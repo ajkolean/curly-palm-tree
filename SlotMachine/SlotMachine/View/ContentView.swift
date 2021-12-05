@@ -4,7 +4,8 @@ struct ContentView: View {
     // MARK: - PROPERTIES
     let symbols = ["gfx-bell", "gfx-cherry", "gfx-coin", "gfx-grape", "gfx-seven", "gfx-strawberry"]
 
-    @State private var highScore = 0
+    @AppStorage("highScore") var highScore = 0
+
     @State private var coins = 100
     @State private var betAmount = 10
     @State private var reels = [0, 1, 2]
@@ -161,7 +162,7 @@ struct ContentView: View {
             .overlay(
                 // RESET
                 Button(action: {
-                    print("reset the game")
+                    resetGame()
                 }, label: {
                     Image(systemName: "arrow.2.circlepath.circle")
                 })
@@ -230,6 +231,12 @@ struct ContentView: View {
 
     private func activateBet10() {
         betAmount = 10
+    }
+
+    private func resetGame() {
+        highScore = 0
+        coins = 100
+        activateBet10()
     }
 }
 
