@@ -10,6 +10,15 @@ struct ContentView: View {
     @State private var reels = [0, 1, 2]
     @State private var isShowingInfoView = false
 
+    private var isActiveBet10: Bool {
+        betAmount == 10
+    }
+
+    private var isActiveBet20: Bool {
+        betAmount == 20
+    }
+    
+
     // MARK: - BODY
     var body: some View {
         ZStack {
@@ -108,18 +117,18 @@ struct ContentView: View {
                     // MARK: - BET 20
                     HStack(alignment: .center, spacing: 10) {
                         Button(action: {
-                            print("Bet 20 coins")
+                            activateBet20()
                         }, label: {
                             Text("20")
                                 .fontWeight(.heavy)
-                                .foregroundColor(.white)
+                                .foregroundColor(isActiveBet20 ? yellowColor : .white)
                                 .betNumberModifier()
                         }) //: BUTTON
                             .betCapsuleModifier()
 
                         Image("gfx-casino-chips")
                             .resizable()
-                            .opacity(0)
+                            .opacity(isActiveBet20 ? 1 : 0)
                             .casinoChipsModifier()
                     } // HSTACK
 
@@ -127,15 +136,15 @@ struct ContentView: View {
                     HStack(alignment: .center, spacing: 10) {
                         Image("gfx-casino-chips")
                             .resizable()
-                            .opacity(1)
+                            .opacity(isActiveBet10 ? 1 : 0)
                             .casinoChipsModifier()
 
                         Button(action: {
-                            print("Bet 10 coins")
+                            activateBet10()
                         }, label: {
                             Text("10")
                                 .fontWeight(.heavy)
-                                .foregroundColor(.yellow)
+                                .foregroundColor(isActiveBet10 ? yellowColor : .white)
                                 .betNumberModifier()
                         }) //: BUTTON
                             .betCapsuleModifier()
@@ -207,6 +216,14 @@ struct ContentView: View {
 
     private func playerLoses() {
         coins -= betAmount
+    }
+
+    private func activateBet20() {
+        betAmount = 20
+    }
+
+    private func activateBet10() {
+        betAmount = 10
     }
 }
 
