@@ -6,7 +6,13 @@ struct ContentView: View {
 
     @AppStorage("highScore") var highScore = 0
 
-    @State private var coins = 100
+    @State private var coins = 100 {
+        didSet {
+            guard coins <= 0 else { return }
+            playSound(sound: "game-over", type: "mp3")
+        }
+    }
+
     @State private var betAmount = 10
     @State private var reels = [0, 1, 2]
     @State private var isShowingInfoView = false
@@ -99,9 +105,9 @@ struct ContentView: View {
                 } //: VSTACK
                 .layoutPriority(2)
 
-                // MARK: - FOOTER
                 Spacer()
-
+    
+                // MARK: - FOOTER
                 HStack {
                     // MARK: - BET 20
                     HStack(alignment: .center, spacing: 10) {
@@ -178,6 +184,9 @@ struct ContentView: View {
                 }
             }
         } //: ZSTACK
+        .onAppear {
+            playSound(sound: "riseup", type: "mp3")
+        }
         .sheet(isPresented: $isShowingInfoView) {
             InfoView()
         }
@@ -201,6 +210,8 @@ struct ContentView: View {
         reels = reels.map { _ in
             Int.random(in: 0...symbols.count - 1)
         }
+        playSound(sound: "spin", type: "mp3")
+        haptics.notificationOccurred(.success)
     }
 
     // CHECK THE WINNING
@@ -209,6 +220,8 @@ struct ContentView: View {
             playerWins()
             if coins > highScore {
                 newHighScore()
+            } else {
+                playSound(sound: "win", type: "mp3")
             }
         } else {
             playerLoses()
@@ -221,6 +234,7 @@ struct ContentView: View {
 
     private func newHighScore() {
         highScore = coins
+        playSound(sound: "high-score", type: "mp3")
     }
 
     private func playerLoses() {
@@ -229,16 +243,21 @@ struct ContentView: View {
 
     private func activateBet20() {
         betAmount = 20
+        playSound(sound: "casino-chips", type: "mp3")
+        haptics.notificationOccurred(.success)
     }
 
     private func activateBet10() {
         betAmount = 10
+        playSound(sound: "casino-chips", type: "mp3")
+        haptics.notificationOccurred(.success)
     }
 
     private func resetGame() {
         highScore = 0
         coins = 100
         activateBet10()
+        playSound(sound: "chimeup", type: "mp3")
     }
 
     private func symbolAnimation(withRandomRange range: ClosedRange<Double>) -> Animation? {

@@ -28,6 +28,7 @@
 		FF65BD73275CBC1300827FA0 /* GameOverModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF65BD72275CBC1300827FA0 /* GameOverModalView.swift */; };
 		FF65BD75275CCE9D00827FA0 /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF65BD74275CCE9D00827FA0 /* ScoreView.swift */; };
 		FF65BD77275CCF8400827FA0 /* BackgroundGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF65BD76275CCF8400827FA0 /* BackgroundGradientView.swift */; };
+		FF65BD79275CD7E000827FA0 /* PlaySound.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF65BD78275CD7E000827FA0 /* PlaySound.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		FF65BD72275CBC1300827FA0 /* GameOverModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverModalView.swift; sourceTree = "<group>"; };
 		FF65BD74275CCE9D00827FA0 /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
 		FF65BD76275CCF8400827FA0 /* BackgroundGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundGradientView.swift; sourceTree = "<group>"; };
+		FF65BD78275CD7E000827FA0 /* PlaySound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySound.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 			children = (
 				FF65BD61275B857F00827FA0 /* Constants.swift */,
 				FF65BD68275BA0AC00827FA0 /* Modifiers.swift */,
+				FF65BD78275CD7E000827FA0 /* PlaySound.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				FF65BD6F275BAEDD00827FA0 /* ReelView.swift in Sources */,
 				FF65BD75275CCE9D00827FA0 /* ScoreView.swift in Sources */,
 				FF65BD42275B7E9D00827FA0 /* ContentView.swift in Sources */,
+				FF65BD79275CD7E000827FA0 /* PlaySound.swift in Sources */,
 				FF65BD67275BA07700827FA0 /* LogoView.swift in Sources */,
 				FF65BD40275B7E9D00827FA0 /* SlotMachineApp.swift in Sources */,
 				FF65BD62275B857F00827FA0 /* Constants.swift in Sources */,
