@@ -22,6 +22,9 @@
 		FFABA0C2275E33EC0024900E /* HeaderComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFABA0C1275E33EC0024900E /* HeaderComponentView.swift */; };
 		FFABA0C4275E345F0024900E /* GuideComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFABA0C3275E345F0024900E /* GuideComponentView.swift */; };
 		FFABA0C6275E36370024900E /* GuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFABA0C5275E36370024900E /* GuideView.swift */; };
+		FFABA0C8275E3DF90024900E /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFABA0C7275E3DF90024900E /* InfoView.swift */; };
+		FFABA0CA275E3E700024900E /* TitleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFABA0C9275E3E700024900E /* TitleModifier.swift */; };
+		FFABA0CD275E3FD60024900E /* ButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFABA0CC275E3FD60024900E /* ButtonModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		FFABA0C1275E33EC0024900E /* HeaderComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderComponentView.swift; sourceTree = "<group>"; };
 		FFABA0C3275E345F0024900E /* GuideComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideComponentView.swift; sourceTree = "<group>"; };
 		FFABA0C5275E36370024900E /* GuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideView.swift; sourceTree = "<group>"; };
+		FFABA0C7275E3DF90024900E /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		FFABA0C9275E3E700024900E /* TitleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleModifier.swift; sourceTree = "<group>"; };
+		FFABA0CC275E3FD60024900E /* ButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +90,7 @@
 				FFABA0A3275E20110024900E /* Preview Content */,
 				FFABA0AB275E20FC0024900E /* Sounds */,
 				FFABA0B9275E26620024900E /* View */,
+				FFABA0CB275E3F270024900E /* Modifier */,
 			);
 			path = Honeymoon;
 			sourceTree = "<group>";
@@ -129,6 +136,7 @@
 				FFABA0BE275E31CA0024900E /* FooterView.swift */,
 				FFABA0C5275E36370024900E /* GuideView.swift */,
 				FFABA0BC275E28E20024900E /* HeaderView.swift */,
+				FFABA0C7275E3DF90024900E /* InfoView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -140,6 +148,15 @@
 				FFABA0C3275E345F0024900E /* GuideComponentView.swift */,
 			);
 			path = Component;
+			sourceTree = "<group>";
+		};
+		FFABA0CB275E3F270024900E /* Modifier */ = {
+			isa = PBXGroup;
+			children = (
+				FFABA0C9275E3E700024900E /* TitleModifier.swift */,
+				FFABA0CC275E3FD60024900E /* ButtonModifier.swift */,
+			);
+			path = Modifier;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,9 +233,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFABA0B7275E26360024900E /* HoneymoonData.swift in Sources */,
+				FFABA0C8275E3DF90024900E /* InfoView.swift in Sources */,
 				FFABA0BF275E31CA0024900E /* FooterView.swift in Sources */,
+				FFABA0CA275E3E700024900E /* TitleModifier.swift in Sources */,
 				FFABA0BD275E28E20024900E /* HeaderView.swift in Sources */,
 				FFABA0C2275E33EC0024900E /* HeaderComponentView.swift in Sources */,
+				FFABA0CD275E3FD60024900E /* ButtonModifier.swift in Sources */,
 				FFABA0B5275E260E0024900E /* HoneymoonModel.swift in Sources */,
 				FFABA0A0275E200F0024900E /* ContentView.swift in Sources */,
 				FFABA09E275E200F0024900E /* HoneymoonApp.swift in Sources */,
