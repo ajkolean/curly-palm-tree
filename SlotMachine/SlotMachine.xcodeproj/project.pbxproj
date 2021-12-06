@@ -81,7 +81,7 @@
 		FF65BD74275CCE9D00827FA0 /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
 		FF65BD76275CCF8400827FA0 /* BackgroundGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundGradientView.swift; sourceTree = "<group>"; };
 		FF65BD78275CD7E000827FA0 /* PlaySound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySound.swift; sourceTree = "<group>"; };
-		FF65BD7A275CDC0600827FA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		FF65BD7A275CDC0600827FA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF65BD7B275CDC5D00827FA0 /* SlotMachine.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SlotMachine.entitlements; sourceTree = "<group>"; };
 		FF65BD7E275DD8E900827FA0 /* SlotMachineStickers.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SlotMachineStickers.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF65BD80275DD8EC00827FA0 /* Stickers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Stickers.xcassets; sourceTree = "<group>"; };
@@ -120,15 +120,12 @@
 		FF65BD3E275B7E9D00827FA0 /* SlotMachine */ = {
 			isa = PBXGroup;
 			children = (
-				FF65BD7B275CDC5D00827FA0 /* SlotMachine.entitlements */,
-				FF65BD7A275CDC0600827FA0 /* Info.plist */,
 				FF65BD65275B94EF00827FA0 /* App */,
-				FF65BD60275B856E00827FA0 /* Utility */,
-				FF65BD5D275B850F00827FA0 /* Sounds */,
-				FF65BD5E275B851E00827FA0 /* View */,
-				FF65BD43275B7EA000827FA0 /* Assets.xcassets */,
 				FF65BD45275B7EA000827FA0 /* Preview Content */,
-				FF65BD63275B87ED00827FA0 /* Launch Screen.storyboard */,
+				FF65BD8A275DDAC100827FA0 /* Resources */,
+				FF65BD5D275B850F00827FA0 /* Sounds */,
+				FF65BD60275B856E00827FA0 /* Utility */,
+				FF65BD5E275B851E00827FA0 /* View */,
 			);
 			path = SlotMachine;
 			sourceTree = "<group>";
@@ -159,13 +156,13 @@
 		FF65BD5E275B851E00827FA0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FF65BD76275CCF8400827FA0 /* BackgroundGradientView.swift */,
 				FF65BD41275B7E9D00827FA0 /* ContentView.swift */,
 				FF65BD72275CBC1300827FA0 /* GameOverModalView.swift */,
+				FF65BD70275BBC6E00827FA0 /* InfoView.swift */,
 				FF65BD66275BA07700827FA0 /* LogoView.swift */,
 				FF65BD6E275BAEDD00827FA0 /* ReelView.swift */,
-				FF65BD70275BBC6E00827FA0 /* InfoView.swift */,
 				FF65BD74275CCE9D00827FA0 /* ScoreView.swift */,
-				FF65BD76275CCF8400827FA0 /* BackgroundGradientView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -195,6 +192,17 @@
 				FF65BD82275DD8EC00827FA0 /* Info.plist */,
 			);
 			path = SlotMachineStickers;
+			sourceTree = "<group>";
+		};
+		FF65BD8A275DDAC100827FA0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FF65BD43275B7EA000827FA0 /* Assets.xcassets */,
+				FF65BD7A275CDC0600827FA0 /* Info.plist */,
+				FF65BD63275B87ED00827FA0 /* Launch Screen.storyboard */,
+				FF65BD7B275CDC5D00827FA0 /* SlotMachine.entitlements */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -458,7 +466,7 @@
 				DEVELOPMENT_TEAM = 6G99765U4F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SlotMachine/Info.plist;
+				INFOPLIST_FILE = SlotMachine/Resources/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Slot Machine";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -493,7 +501,7 @@
 				DEVELOPMENT_TEAM = 6G99765U4F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SlotMachine/Info.plist;
+				INFOPLIST_FILE = SlotMachine/Resources/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Slot Machine";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
