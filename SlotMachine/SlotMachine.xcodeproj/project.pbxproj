@@ -22,7 +22,7 @@
 		FF65BD62275B857F00827FA0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF65BD61275B857F00827FA0 /* Constants.swift */; };
 		FF65BD64275B87ED00827FA0 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF65BD63275B87ED00827FA0 /* Launch Screen.storyboard */; };
 		FF65BD67275BA07700827FA0 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF65BD66275BA07700827FA0 /* LogoView.swift */; };
-		FF65BD69275BA0AC00827FA0 /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF65BD68275BA0AC00827FA0 /* Modifiers.swift */; };
+		FF65BD69275BA0AC00827FA0 /* General.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF65BD68275BA0AC00827FA0 /* General.swift */; };
 		FF65BD6F275BAEDD00827FA0 /* ReelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF65BD6E275BAEDD00827FA0 /* ReelView.swift */; };
 		FF65BD71275BBC6E00827FA0 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF65BD70275BBC6E00827FA0 /* InfoView.swift */; };
 		FF65BD73275CBC1300827FA0 /* GameOverModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF65BD72275CBC1300827FA0 /* GameOverModalView.swift */; };
@@ -31,6 +31,7 @@
 		FF65BD79275CD7E000827FA0 /* PlaySound.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF65BD78275CD7E000827FA0 /* PlaySound.swift */; };
 		FF65BD81275DD8EC00827FA0 /* Stickers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF65BD80275DD8EC00827FA0 /* Stickers.xcassets */; };
 		FF65BD85275DD8EC00827FA0 /* SlotMachineStickers.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FF65BD7E275DD8E900827FA0 /* SlotMachineStickers.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FF65BD8D275DDC0200827FA0 /* ButtonOverlayModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF65BD8C275DDC0200827FA0 /* ButtonOverlayModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,7 +75,7 @@
 		FF65BD61275B857F00827FA0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FF65BD63275B87ED00827FA0 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		FF65BD66275BA07700827FA0 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
-		FF65BD68275BA0AC00827FA0 /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
+		FF65BD68275BA0AC00827FA0 /* General.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = General.swift; sourceTree = "<group>"; };
 		FF65BD6E275BAEDD00827FA0 /* ReelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelView.swift; sourceTree = "<group>"; };
 		FF65BD70275BBC6E00827FA0 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		FF65BD72275CBC1300827FA0 /* GameOverModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverModalView.swift; sourceTree = "<group>"; };
@@ -86,6 +87,7 @@
 		FF65BD7E275DD8E900827FA0 /* SlotMachineStickers.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SlotMachineStickers.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF65BD80275DD8EC00827FA0 /* Stickers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Stickers.xcassets; sourceTree = "<group>"; };
 		FF65BD82275DD8EC00827FA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF65BD8C275DDC0200827FA0 /* ButtonOverlayModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonOverlayModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				FF65BD65275B94EF00827FA0 /* App */,
+				FF65BD8B275DDBDA00827FA0 /* Modifiers */,
 				FF65BD45275B7EA000827FA0 /* Preview Content */,
 				FF65BD8A275DDAC100827FA0 /* Resources */,
 				FF65BD5D275B850F00827FA0 /* Sounds */,
@@ -171,7 +174,6 @@
 			isa = PBXGroup;
 			children = (
 				FF65BD61275B857F00827FA0 /* Constants.swift */,
-				FF65BD68275BA0AC00827FA0 /* Modifiers.swift */,
 				FF65BD78275CD7E000827FA0 /* PlaySound.swift */,
 			);
 			path = Utility;
@@ -203,6 +205,15 @@
 				FF65BD7B275CDC5D00827FA0 /* SlotMachine.entitlements */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		FF65BD8B275DDBDA00827FA0 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				FF65BD8C275DDC0200827FA0 /* ButtonOverlayModifier.swift */,
+				FF65BD68275BA0AC00827FA0 /* General.swift */,
+			);
+			path = Modifiers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,8 +331,9 @@
 				FF65BD79275CD7E000827FA0 /* PlaySound.swift in Sources */,
 				FF65BD67275BA07700827FA0 /* LogoView.swift in Sources */,
 				FF65BD40275B7E9D00827FA0 /* SlotMachineApp.swift in Sources */,
+				FF65BD8D275DDC0200827FA0 /* ButtonOverlayModifier.swift in Sources */,
 				FF65BD62275B857F00827FA0 /* Constants.swift in Sources */,
-				FF65BD69275BA0AC00827FA0 /* Modifiers.swift in Sources */,
+				FF65BD69275BA0AC00827FA0 /* General.swift in Sources */,
 				FF65BD77275CCF8400827FA0 /* BackgroundGradientView.swift in Sources */,
 				FF65BD71275BBC6E00827FA0 /* InfoView.swift in Sources */,
 			);

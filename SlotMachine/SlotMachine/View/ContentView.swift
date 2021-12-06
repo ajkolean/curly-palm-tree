@@ -152,28 +152,11 @@ struct ContentView: View {
                 } //: HSTACK
             } //: VSTACK
             // MARK: - BUTTONS
-            .overlay(
-                // RESET
-                Button(action: {
-                    resetGame()
-                }, label: {
-                    Image(systemName: "arrow.2.circlepath.circle")
-                })
-                    .buttonModifier(),
-                alignment: .topLeading
-            )
-            .overlay(
-                // INFO
-                Button(action: {
-                    isShowingInfoView = true
-                }, label: {
-                    Image(systemName: "info.circle")
-                })
-                    .buttonModifier(),
-                alignment: .topTrailing
-            )
-            .padding()
-            .frame(maxWidth: 720)
+            .buttonOverlayModifier(didTapReset: {
+                resetGame()
+            }, didTapInfo: {
+                isShowingInfoView = true
+            })
             .blur(radius: isShowingModal ? 5 : 0, opaque: false)
 
             // MARK: - POPUP
