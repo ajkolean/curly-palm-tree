@@ -122,6 +122,7 @@
 		FF65BD3E275B7E9D00827FA0 /* SlotMachine */ = {
 			isa = PBXGroup;
 			children = (
+				FF65BD7B275CDC5D00827FA0 /* SlotMachine.entitlements */,
 				FF65BD65275B94EF00827FA0 /* App */,
 				FF65BD8B275DDBDA00827FA0 /* Modifiers */,
 				FF65BD45275B7EA000827FA0 /* Preview Content */,
@@ -202,7 +203,6 @@
 				FF65BD43275B7EA000827FA0 /* Assets.xcassets */,
 				FF65BD7A275CDC0600827FA0 /* Info.plist */,
 				FF65BD63275B87ED00827FA0 /* Launch Screen.storyboard */,
-				FF65BD7B275CDC5D00827FA0 /* SlotMachine.entitlements */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -383,6 +383,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = SlotMachine/SlotMachine.entitlements;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -444,6 +445,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = SlotMachine/SlotMachine.entitlements;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -540,6 +542,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_ENTITLEMENTS = SlotMachine/SlotMachine.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6G99765U4F;
@@ -560,6 +563,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_ENTITLEMENTS = SlotMachine/SlotMachine.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6G99765U4F;
