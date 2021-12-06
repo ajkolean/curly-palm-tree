@@ -10,10 +10,12 @@ struct ContentView: View {
             Spacer()
 
             CardView(destination: honeymoonData[3])
-            // TODO: Add pading to cardds
+            // TODO: Add pading to cards
                 .padding()
 
             Spacer()
+
+            FooterView()
         } //: VSTACK
     }
 }
