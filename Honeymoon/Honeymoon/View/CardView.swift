@@ -40,7 +40,7 @@ struct CardView: View {
                 } //: VSTACK
                     .frame(minWidth: 280)
                     .padding(.bottom, 50)
-            }
+            } //: OVERLAY
     }
 }
 
