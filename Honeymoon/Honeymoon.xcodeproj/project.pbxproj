@@ -124,11 +124,11 @@
 		FFABA0B9275E26620024900E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FFABA09F275E200F0024900E /* ContentView.swift */,
 				FFABA0BA275E26780024900E /* CardView.swift */,
-				FFABA0BC275E28E20024900E /* HeaderView.swift */,
+				FFABA09F275E200F0024900E /* ContentView.swift */,
 				FFABA0BE275E31CA0024900E /* FooterView.swift */,
 				FFABA0C5275E36370024900E /* GuideView.swift */,
+				FFABA0BC275E28E20024900E /* HeaderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
