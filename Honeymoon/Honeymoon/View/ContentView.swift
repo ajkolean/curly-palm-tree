@@ -7,19 +7,32 @@ struct ContentView: View {
     @State private var isShowingGuideModal = false
     @State private var isShowingInfoModal = false
 
+    // MARK: - CARD VIEWS
+
+    var cardViews: [CardView] {
+        honeymoonData[0..<2].reversed().map { CardView(destination: $0) }
+    }
+
     // MARK: - BODY
     var body: some View {
         VStack {
+            // MARK: - HEADER
             HeaderView(isShowingGuideView: $isShowingGuideModal, isShowingInfoView: $isShowingInfoModal)
 
             Spacer()
 
-            CardView(destination: honeymoonData[3])
-            // TODO: Add pading to cards
-                .padding()
+            // MARK: - CARDS
+            ZStack {
+                ForEach(cardViews) { cardView in
+                    cardView
+//                        .zIndex(isTopCard(cardView: cardView) ? 1 : 0)
+                }
+            }
+            .padding(.horizontal)
 
             Spacer()
 
+            // MARK: - FOOTER
             FooterView(showBookingAlert: $isShowingAlert)
         } //: VSTACK
         .alert(isPresented: $isShowingAlert) {
@@ -29,6 +42,14 @@ struct ContentView: View {
                 dismissButton: .default(Text("Happy Honeymoon!"))
             )
         }
+    }
+
+    // MARK: - HELPERS
+    private func isTopCard(cardView: CardView) -> Bool {
+        guard let index = cardViews.firstIndex(where: { $0.id == cardView.id }) else {
+            return false
+        }
+        return index == 0
     }
 }
 
