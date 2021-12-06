@@ -171,3 +171,29 @@ A collection of practice Apps using SwiftUI 3
 ### iPad (Light)
 
 <img src="https://github.com/ajkolean/curly-palm-tree/blob/main/Avocados/avocadosIpadGif.gif" width="600" height="450" />
+
+
+# Slot Machine App
+
+## Featured Objectives
+
+- How to build an iPhone, an iPad and a Macintosh game
+- How create a Mac app with Mac Catalyst framework 
+- How to store data permanently with User’s Defaults
+- How to create a complex Game Interface
+- How to code the Game Logic
+- How to use Random Numbers with Swift
+- How to enhance the user experience with sound effects 
+- How to create extensions and custom View Modifiers 
+- Build eye-catchy Info view with a logo background music
+- How to create a Launch Screen and App Icons
+
+## Preview
+
+### iPhone
+
+<img src="https://github.com/ajkolean/curly-palm-tree/blob/main/SlotMachine/slotIphonePreview.gif" width="300" height="600" />
+
+### Mac
+
+<img src="https://github.com/ajkolean/curly-palm-tree/blob/main/SlotMachine/slotMacPreview.gif" width="232" height="310" />
