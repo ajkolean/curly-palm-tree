@@ -13,6 +13,7 @@
 		FFABA0A5275E20110024900E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFABA0A4275E20110024900E /* Preview Assets.xcassets */; };
 		FFABA0AE275E20FC0024900E /* sound-rise.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FFABA0AC275E20FC0024900E /* sound-rise.mp3 */; };
 		FFABA0AF275E20FC0024900E /* sound-click.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FFABA0AD275E20FC0024900E /* sound-click.mp3 */; };
+		FFABA0B1275E21360024900E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFABA0B0275E21360024900E /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,8 @@
 		FFABA0A4275E20110024900E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FFABA0AC275E20FC0024900E /* sound-rise.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-rise.mp3"; sourceTree = "<group>"; };
 		FFABA0AD275E20FC0024900E /* sound-click.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-click.mp3"; sourceTree = "<group>"; };
+		FFABA0B0275E21360024900E /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		FFABA0B2275E226A0024900E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,10 +58,12 @@
 		FFABA09C275E200F0024900E /* Honeymoon */ = {
 			isa = PBXGroup;
 			children = (
+				FFABA0B2275E226A0024900E /* Info.plist */,
 				FFABA0AB275E20FC0024900E /* Sounds */,
 				FFABA09D275E200F0024900E /* HoneymoonApp.swift */,
 				FFABA09F275E200F0024900E /* ContentView.swift */,
 				FFABA0A1275E20110024900E /* Assets.xcassets */,
+				FFABA0B0275E21360024900E /* Launch Screen.storyboard */,
 				FFABA0A3275E20110024900E /* Preview Content */,
 			);
 			path = Honeymoon;
@@ -142,6 +147,7 @@
 				FFABA0AE275E20FC0024900E /* sound-rise.mp3 in Resources */,
 				FFABA0AF275E20FC0024900E /* sound-click.mp3 in Resources */,
 				FFABA0A5275E20110024900E /* Preview Assets.xcassets in Resources */,
+				FFABA0B1275E21360024900E /* Launch Screen.storyboard in Resources */,
 				FFABA0A2275E20110024900E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,9 +294,10 @@
 				DEVELOPMENT_TEAM = 6G99765U4F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Honeymoon/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
@@ -318,9 +325,10 @@
 				DEVELOPMENT_TEAM = 6G99765U4F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Honeymoon/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
