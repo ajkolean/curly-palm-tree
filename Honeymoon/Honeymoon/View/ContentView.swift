@@ -1,16 +1,10 @@
-//
-//  ContentView.swift
-//  Honeymoon
-//
-//  Created by Andy Kolean on 12/6/21.
-//
-
 import SwiftUI
 
 struct ContentView: View {
+
+    // MARK: - BODY
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        CardView(destination: honeymoonData[1])
     }
 }
 

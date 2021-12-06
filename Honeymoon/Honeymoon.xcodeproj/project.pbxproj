@@ -14,6 +14,9 @@
 		FFABA0AE275E20FC0024900E /* sound-rise.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FFABA0AC275E20FC0024900E /* sound-rise.mp3 */; };
 		FFABA0AF275E20FC0024900E /* sound-click.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FFABA0AD275E20FC0024900E /* sound-click.mp3 */; };
 		FFABA0B1275E21360024900E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFABA0B0275E21360024900E /* Launch Screen.storyboard */; };
+		FFABA0B5275E260E0024900E /* HoneymoonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFABA0B4275E260E0024900E /* HoneymoonModel.swift */; };
+		FFABA0B7275E26360024900E /* HoneymoonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFABA0B6275E26360024900E /* HoneymoonData.swift */; };
+		FFABA0BB275E26780024900E /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFABA0BA275E26780024900E /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		FFABA0AD275E20FC0024900E /* sound-click.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-click.mp3"; sourceTree = "<group>"; };
 		FFABA0B0275E21360024900E /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		FFABA0B2275E226A0024900E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		FFABA0B4275E260E0024900E /* HoneymoonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoneymoonModel.swift; sourceTree = "<group>"; };
+		FFABA0B6275E26360024900E /* HoneymoonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoneymoonData.swift; sourceTree = "<group>"; };
+		FFABA0BA275E26780024900E /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +64,15 @@
 		FFABA09C275E200F0024900E /* Honeymoon */ = {
 			isa = PBXGroup;
 			children = (
-				FFABA0B2275E226A0024900E /* Info.plist */,
-				FFABA0AB275E20FC0024900E /* Sounds */,
-				FFABA09D275E200F0024900E /* HoneymoonApp.swift */,
-				FFABA09F275E200F0024900E /* ContentView.swift */,
 				FFABA0A1275E20110024900E /* Assets.xcassets */,
+				FFABA0B9275E26620024900E /* View */,
+				FFABA09D275E200F0024900E /* HoneymoonApp.swift */,
+				FFABA0B2275E226A0024900E /* Info.plist */,
 				FFABA0B0275E21360024900E /* Launch Screen.storyboard */,
+				FFABA0B3275E25F60024900E /* Model */,
 				FFABA0A3275E20110024900E /* Preview Content */,
+				FFABA0AB275E20FC0024900E /* Sounds */,
+				FFABA0B8275E26390024900E /* Data */,
 			);
 			path = Honeymoon;
 			sourceTree = "<group>";
@@ -84,6 +92,31 @@
 				FFABA0AD275E20FC0024900E /* sound-click.mp3 */,
 			);
 			path = Sounds;
+			sourceTree = "<group>";
+		};
+		FFABA0B3275E25F60024900E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FFABA0B4275E260E0024900E /* HoneymoonModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FFABA0B8275E26390024900E /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				FFABA0B6275E26360024900E /* HoneymoonData.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		FFABA0B9275E26620024900E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FFABA09F275E200F0024900E /* ContentView.swift */,
+				FFABA0BA275E26780024900E /* CardView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,8 +192,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFABA0B7275E26360024900E /* HoneymoonData.swift in Sources */,
+				FFABA0B5275E260E0024900E /* HoneymoonModel.swift in Sources */,
 				FFABA0A0275E200F0024900E /* ContentView.swift in Sources */,
 				FFABA09E275E200F0024900E /* HoneymoonApp.swift in Sources */,
+				FFABA0BB275E26780024900E /* CardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
