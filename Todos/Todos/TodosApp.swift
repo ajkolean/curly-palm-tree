@@ -1,10 +1,3 @@
-//
-//  TodosApp.swift
-//  Todos
-//
-//  Created by Andy Kolean on 12/7/21.
-//
-
 import SwiftUI
 
 @main

@@ -1,12 +1,18 @@
 import SwiftUI
+import CoreData
 
 struct AddTodoView: View {
     // MARK: - PROPERTIES
 
+    @Environment(\.managedObjectContext) private var viewContext
     @Environment(\.presentationMode) private var presentationMode
 
     @State private var name = ""
     @State private var priority = "Normal"
+
+    @State private var isErrorShowing = false
+    @State private var errorTitle = ""
+    @State private var errorMessage = ""
 
     let priorities = ["High", "Normal", "Low"]
 
@@ -29,7 +35,7 @@ struct AddTodoView: View {
                     // MARK: - SAVE BUTTON
 
                     Button(action: {
-                        print("save")
+                        saveTodo()
                     }, label: {
                         Text("Save")
                     }) //: BUTTON
@@ -47,7 +53,34 @@ struct AddTodoView: View {
             }
             .navigationTitle("New Todo")
             .navigationBarTitleDisplayMode(.inline)
+            .alert(isPresented: $isErrorShowing) {
+                Alert(
+                    title: Text(errorTitle),
+                    message: Text(errorMessage),
+                    dismissButton: .default(Text("OK"))
+                )
+            }
         } //: NAV
+    }
+
+    // MARK: - HELPERS
+
+    private func saveTodo() {
+        guard !name.isEmpty else {
+            isErrorShowing = true
+            errorTitle = "Invalid Name"
+            errorMessage = "Make sure to enter something for the todo item."
+            return
+        }
+        let todo = Todo(context: viewContext)
+        todo.name = name
+        todo.priority = priority
+        do {
+            try viewContext.save()
+        } catch {
+            print(error)
+        }
+        presentationMode.wrappedValue.dismiss()
     }
 }
 
