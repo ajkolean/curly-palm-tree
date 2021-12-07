@@ -61,6 +61,13 @@ struct ContentView: View {
             ZStack {
                 ForEach(cardViews.reversed()) { cardView in
                     cardView
+                        .offset(
+                            x: isTopCard(cardView: cardView) ? dragState.translation.width : 0,
+                            y: isTopCard(cardView: cardView) ? dragState.translation.height : 0
+                        )
+                        .scaleEffect(dragState.isDragging && isTopCard(cardView: cardView) ? 0.85 : 1.0)
+                        .rotationEffect(Angle(degrees: isTopCard(cardView: cardView) ?  Double(dragState.translation.width / 12) : 0))
+                        .animation(.interpolatingSpring(stiffness: 120, damping: 120), value: dragState)
                         .gesture(
                             LongPressGesture(minimumDuration: 0.01)
                                 .sequenced(before: DragGesture())
