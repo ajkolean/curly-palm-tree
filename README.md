@@ -197,3 +197,23 @@ A collection of practice Apps using SwiftUI 3
 ### Mac
 
 <img src="https://github.com/ajkolean/curly-palm-tree/blob/main/SlotMachine/slotMacPreview.gif" width="232" height="310" />
+
+
+# Honeymoon App
+
+## Featured Objectives
+
+- How to design an advanced iOS and iPadOS application 
+- How to create a Launch Screen and App Icons 
+- How to create reusable UI components 
+- Build eye-catchy app Guide and Info views 
+- How to organize the file structures properly 
+- How to create a deck of cards 
+- How to master long press gestures with SwiftUI 
+- How to create custom transitions 
+- How to enhance the user experience with drag gestures How to support the Light/Dark mode with SwiftUI 
+
+
+## Preview
+
+<img src="https://github.com/ajkolean/curly-palm-tree/blob/main/Honeymoon/honeymoonAppGif.gif" width="300" height="600" />
