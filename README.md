@@ -27,7 +27,14 @@ A collection of practice Apps using SwiftUI 3
   - [Preview](#preview-6)
     - [iPhone (Dark)](#iphone-dark)
     - [iPad (Light)](#ipad-light)
-
+- [Slot Machine App](#slot-machine-app)
+  - [Featured Objectives](#featured-objectives-7)
+  - [Preview](#preview-7)
+    - [iPhone](#iphone-1)
+    - [Mac](#mac-1)
+- [Honeymoon App](#honeymoon-app)
+  - [Featured Objectives](#featured-objectives-8)
+  - [Preview](#preview-8)
 
 # Restart App
 
