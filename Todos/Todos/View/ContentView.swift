@@ -6,10 +6,10 @@ struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
 
     @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Todo.id, ascending: true)],
+        sortDescriptors: [NSSortDescriptor(keyPath: \Todo.name, ascending: true)],
         animation: .default
     )
-    private var items: FetchedResults<Todo>
+    private var todos: FetchedResults<Todo>
 
     @State private var isShowingAddView = false
 
@@ -17,20 +17,20 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(items) { item in
-                    Text(item.name ?? "")
-                } //: LIST
+                ForEach(todos) { todo in
+                    HStack {
+                        Text(todo.name ?? "Unknown")
+                        Spacer()
+                        Text(todo.priority ?? "Unknown")
+                    }
+                } //: LOOP
                 .onDelete(perform: deleteItems)
-            }
+            } //: LIST
             .toolbar {
-//                ToolbarItem(placement: .navigationBarTrailing) {
-//                    EditButton()
-//                }
+                ToolbarItem(placement: .navigationBarLeading) {
+                    EditButton()
+                }
                 ToolbarItem(placement: .navigationBarTrailing) {
-//                    Button(action: addItem) {
-//                        Label("Add Item", systemImage: "plus")
-//                    }
-
                     Button(action: {
                         isShowingAddView.toggle()
                     }, label: {
@@ -43,19 +43,18 @@ struct ContentView: View {
             }
             .navigationTitle("TODO")
             .navigationBarTitleDisplayMode(.inline)
-            Text("Select an item")
-        }
+        } //: NAVIGATION
     }
+
+    // MARK: - HELPERS
 
     private func deleteItems(offsets: IndexSet) {
         withAnimation {
-            offsets.map { items[$0] }.forEach(viewContext.delete)
+            offsets.map { todos[$0] }.forEach(viewContext.delete)
 
             do {
                 try viewContext.save()
             } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
                 let nsError = error as NSError
                 fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
             }
