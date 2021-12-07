@@ -109,6 +109,7 @@ struct ContentView: View {
                                     guard drag.translation.width < -dragAreaThreshold || drag.translation.width > dragAreaThreshold else {
                                         return
                                     }
+                                    playSound(sound: "sound-rise", type: "mp3")
                                     moveCards()
                                 }
                         )
