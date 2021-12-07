@@ -13,7 +13,7 @@ struct ContentView: View {
 
     // MARK: - CARD VIEWS
 
-    @State var cardViews: [CardView] = honeymoonData[0..<2].map { CardView(destination: $0) }
+    @State var cardViews: [CardView] = honeymoonData.map { CardView(destination: $0) }
 
     // MARK: - DRAG STATES
 
@@ -62,7 +62,7 @@ struct ContentView: View {
 
             // MARK: - CARDS
             ZStack {
-                ForEach(cardViews) { cardView in
+                ForEach(cardViews[0..<2]) { cardView in
                     cardView
                         .zIndex(isTopCard(cardView: cardView) ? 1 : 0)
                         .overlay {
