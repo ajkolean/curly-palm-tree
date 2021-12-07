@@ -7,6 +7,7 @@ struct ContentView: View {
     @State private var isShowingGuideModal = false
     @State private var isShowingInfoModal = false
     @GestureState private var dragState = DragState.inactive
+    @State private var cardRemovalTransition = AnyTransition.trailingBottom
 
     private var dragAreaThreshold: CGFloat = 65.0
 
@@ -95,6 +96,14 @@ struct ContentView: View {
                                         break
                                     }
                                 }
+                                .onChanged { value in
+                                    guard case .second(true, let drag?) = value else { return }
+                                    if drag.translation.width < -dragAreaThreshold {
+                                        cardRemovalTransition = .leadingBottom
+                                    } else if drag.translation.width > dragAreaThreshold {
+                                        cardRemovalTransition = .trailingBottom
+                                    }
+                                }
                                 .onEnded { value in
                                     guard case .second(true, let drag?) = value else { return }
                                     guard drag.translation.width < -dragAreaThreshold || drag.translation.width > dragAreaThreshold else {
@@ -102,7 +111,8 @@ struct ContentView: View {
                                     }
                                     moveCards()
                                 }
-                        ) //: GESTURE
+                        )
+                        .transition(cardRemovalTransition)
 
                 }
             }
