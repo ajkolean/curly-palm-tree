@@ -12,7 +12,7 @@ struct ContentView: View {
 
     // MARK: - CARD VIEWS
 
-    var cardViews: [CardView] = honeymoonData[0..<2].map { CardView(destination: $0) }
+    @State var cardViews: [CardView] = honeymoonData[0..<2].map { CardView(destination: $0) }
 
     // MARK: - DRAG STATES
 
@@ -61,8 +61,9 @@ struct ContentView: View {
 
             // MARK: - CARDS
             ZStack {
-                ForEach(cardViews.reversed()) { cardView in
+                ForEach(cardViews) { cardView in
                     cardView
+                        .zIndex(isTopCard(cardView: cardView) ? 1 : 0)
                         .overlay {
                             ZStack {
                                 Image(systemName: "x.circle")
@@ -94,7 +95,15 @@ struct ContentView: View {
                                         break
                                     }
                                 }
-                        )
+                                .onEnded { value in
+                                    guard case .second(true, let drag?) = value else { return }
+                                    guard drag.translation.width < -dragAreaThreshold || drag.translation.width > dragAreaThreshold else {
+                                        return
+                                    }
+                                    moveCards()
+                                }
+                        ) //: GESTURE
+
                 }
             }
             .padding(.horizontal)
@@ -122,6 +131,12 @@ struct ContentView: View {
         return false
       }
       return index == 0
+    }
+
+    private func moveCards() {
+        let firstCard = cardViews.removeFirst()
+        let newCard = CardView(destination: firstCard.destination)
+        cardViews.append(newCard)
     }
 }
 
