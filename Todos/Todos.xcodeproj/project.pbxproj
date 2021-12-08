@@ -16,6 +16,9 @@
 		FF09B5B6275F98D100F0373D /* AddTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF09B5B5275F98D100F0373D /* AddTodoView.swift */; };
 		FFCC53CC2760CB63004DA542 /* EmptyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCC53CB2760CB63004DA542 /* EmptyListView.swift */; };
 		FFCC53CF2760CD72004DA542 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCC53CE2760CD72004DA542 /* Constants.swift */; };
+		FFCC53D12760E09B004DA542 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCC53D02760E09B004DA542 /* SettingsView.swift */; };
+		FFCC53D32760E2F8004DA542 /* FormRowStaticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCC53D22760E2F8004DA542 /* FormRowStaticView.swift */; };
+		FFCC53D52760E761004DA542 /* FormRowLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCC53D42760E761004DA542 /* FormRowLinkView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		FFCC53CA2760CA03004DA542 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		FFCC53CB2760CB63004DA542 /* EmptyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyListView.swift; sourceTree = "<group>"; };
 		FFCC53CE2760CD72004DA542 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FFCC53D02760E09B004DA542 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		FFCC53D22760E2F8004DA542 /* FormRowStaticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormRowStaticView.swift; sourceTree = "<group>"; };
+		FFCC53D42760E761004DA542 /* FormRowLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormRowLinkView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +94,9 @@
 				FF09B5A3275F98AF00F0373D /* ContentView.swift */,
 				FF09B5B5275F98D100F0373D /* AddTodoView.swift */,
 				FFCC53CB2760CB63004DA542 /* EmptyListView.swift */,
+				FFCC53D02760E09B004DA542 /* SettingsView.swift */,
+				FFCC53D22760E2F8004DA542 /* FormRowStaticView.swift */,
+				FFCC53D42760E761004DA542 /* FormRowLinkView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -171,8 +180,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF09B5AB275F98B000F0373D /* Persistence.swift in Sources */,
+				FFCC53D12760E09B004DA542 /* SettingsView.swift in Sources */,
 				FF09B5A4275F98AF00F0373D /* ContentView.swift in Sources */,
 				FFCC53CC2760CB63004DA542 /* EmptyListView.swift in Sources */,
+				FFCC53D32760E2F8004DA542 /* FormRowStaticView.swift in Sources */,
+				FFCC53D52760E761004DA542 /* FormRowLinkView.swift in Sources */,
 				FF09B5A2275F98AF00F0373D /* TodosApp.swift in Sources */,
 				FFCC53CF2760CD72004DA542 /* Constants.swift in Sources */,
 				FF09B5AE275F98B000F0373D /* Todos.xcdatamodeld in Sources */,

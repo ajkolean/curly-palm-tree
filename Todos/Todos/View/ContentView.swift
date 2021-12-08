@@ -12,6 +12,7 @@ struct ContentView: View {
     private var todos: FetchedResults<Todo>
 
     @State private var isShowingAddView = false
+    @State private var isShowingSettingsView = false
     @State private var isAnimatingButton = false
 
     // MARK: - BODY
@@ -24,12 +25,12 @@ struct ContentView: View {
                     }
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button(action: {
-                            isShowingAddView.toggle()
+                            isShowingSettingsView.toggle()
                         }, label: {
-                            Image(systemName: "plus")
+                            Image(systemName: "paintbrush")
                         })
-                            .sheet(isPresented: $isShowingAddView) {
-                                AddTodoView()
+                            .sheet(isPresented: $isShowingSettingsView) {
+                                SettingsView()
                             }
                     }
                 }
