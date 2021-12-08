@@ -10,7 +10,6 @@ struct SettingsView: View {
         NavigationView {
             VStack(alignment: .center, spacing: 0) {
                 Form {
-
                     // MARK: - SECTION 3
                     Section(content: {
                         FormRowLinkView(icon: "globe", color: .pink, text: "Website", link: "https://swiftuimasterclass.com")
@@ -34,7 +33,6 @@ struct SettingsView: View {
                     })
 
                 } //: FORM
-//                .listStyle(.grouped)
 
                 // MARK: - FOOTER
                 Text("Copyright © All rights reserved.\nBetter Apps ♡ Less Code")
@@ -56,7 +54,6 @@ struct SettingsView: View {
             }
             .navigationTitle("Settings")
             .navigationBarTitleDisplayMode(.inline)
-            .background(backgroundColor.edgesIgnoringSafeArea(.all))
         } //: NAVIGATION
     }
 }
