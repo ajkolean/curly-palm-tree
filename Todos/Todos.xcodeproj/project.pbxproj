@@ -14,6 +14,8 @@
 		FF09B5AB275F98B000F0373D /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF09B5AA275F98B000F0373D /* Persistence.swift */; };
 		FF09B5AE275F98B000F0373D /* Todos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FF09B5AC275F98B000F0373D /* Todos.xcdatamodeld */; };
 		FF09B5B6275F98D100F0373D /* AddTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF09B5B5275F98D100F0373D /* AddTodoView.swift */; };
+		FFCC53CC2760CB63004DA542 /* EmptyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCC53CB2760CB63004DA542 /* EmptyListView.swift */; };
+		FFCC53CF2760CD72004DA542 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCC53CE2760CD72004DA542 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,9 @@
 		FF09B5AA275F98B000F0373D /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		FF09B5AD275F98B000F0373D /* Todos.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Todos.xcdatamodel; sourceTree = "<group>"; };
 		FF09B5B5275F98D100F0373D /* AddTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoView.swift; sourceTree = "<group>"; };
+		FFCC53CA2760CA03004DA542 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		FFCC53CB2760CB63004DA542 /* EmptyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyListView.swift; sourceTree = "<group>"; };
+		FFCC53CE2760CD72004DA542 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +62,8 @@
 		FF09B5A0275F98AE00F0373D /* Todos */ = {
 			isa = PBXGroup;
 			children = (
+				FFCC53CD2760CD67004DA542 /* Utility */,
+				FFCC53CA2760CA03004DA542 /* Info.plist */,
 				FF09B5A1275F98AF00F0373D /* TodosApp.swift */,
 				FF09B5B4275F98C000F0373D /* View */,
 				FF09B5A5275F98B000F0373D /* Assets.xcassets */,
@@ -80,8 +87,17 @@
 			children = (
 				FF09B5A3275F98AF00F0373D /* ContentView.swift */,
 				FF09B5B5275F98D100F0373D /* AddTodoView.swift */,
+				FFCC53CB2760CB63004DA542 /* EmptyListView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		FFCC53CD2760CD67004DA542 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				FFCC53CE2760CD72004DA542 /* Constants.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,7 +172,9 @@
 			files = (
 				FF09B5AB275F98B000F0373D /* Persistence.swift in Sources */,
 				FF09B5A4275F98AF00F0373D /* ContentView.swift in Sources */,
+				FFCC53CC2760CB63004DA542 /* EmptyListView.swift in Sources */,
 				FF09B5A2275F98AF00F0373D /* TodosApp.swift in Sources */,
+				FFCC53CF2760CD72004DA542 /* Constants.swift in Sources */,
 				FF09B5AE275F98B000F0373D /* Todos.xcdatamodeld in Sources */,
 				FF09B5B6275F98D100F0373D /* AddTodoView.swift in Sources */,
 			);
@@ -292,11 +310,12 @@
 				DEVELOPMENT_TEAM = 6G99765U4F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Todos/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -321,11 +340,12 @@
 				DEVELOPMENT_TEAM = 6G99765U4F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Todos/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

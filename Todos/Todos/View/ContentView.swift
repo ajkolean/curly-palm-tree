@@ -16,33 +16,41 @@ struct ContentView: View {
     // MARK: - PREVIEW
     var body: some View {
         NavigationView {
-            List {
-                ForEach(todos) { todo in
-                    HStack {
-                        Text(todo.name ?? "Unknown")
-                        Spacer()
-                        Text(todo.priority ?? "Unknown")
-                    }
-                } //: LOOP
-                .onDelete(perform: deleteItems)
-            } //: LIST
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    EditButton()
-                }
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: {
-                        isShowingAddView.toggle()
-                    }, label: {
-                        Image(systemName: "plus")
-                    })
-                        .sheet(isPresented: $isShowingAddView) {
-                            AddTodoView()
+            ZStack {
+                List {
+                    ForEach(todos) { todo in
+                        HStack {
+                            Text(todo.name ?? "Unknown")
+                            Spacer()
+                            Text(todo.priority ?? "Unknown")
                         }
+                    } //: LOOP
+                    .onDelete(perform: deleteItems)
+                } //: LIST
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        EditButton()
+                    }
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button(action: {
+                            isShowingAddView.toggle()
+                        }, label: {
+                            Image(systemName: "plus")
+                        })
+                            .sheet(isPresented: $isShowingAddView) {
+                                AddTodoView()
+                            }
+                    }
                 }
-            }
-            .navigationTitle("TODO")
-            .navigationBarTitleDisplayMode(.inline)
+                .navigationTitle("TODO")
+                .navigationBarTitleDisplayMode(.inline)
+
+                // MARK: - EMPTY TODOS
+
+                if todos.isEmpty {
+                    EmptyListView()
+                }
+            } //: ZSTACK
         } //: NAVIGATION
     }
 
