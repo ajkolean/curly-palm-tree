@@ -12,21 +12,12 @@ struct ContentView: View {
     private var todos: FetchedResults<Todo>
 
     @State private var isShowingAddView = false
+    @State private var isAnimatingButton = false
 
-    // MARK: - PREVIEW
+    // MARK: - BODY
     var body: some View {
         NavigationView {
-            ZStack {
-                List {
-                    ForEach(todos) { todo in
-                        HStack {
-                            Text(todo.name ?? "Unknown")
-                            Spacer()
-                            Text(todo.priority ?? "Unknown")
-                        }
-                    } //: LOOP
-                    .onDelete(perform: deleteItems)
-                } //: LIST
+            listView
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {
                         EditButton()
@@ -42,19 +33,68 @@ struct ContentView: View {
                             }
                     }
                 }
+                .sheet(isPresented: $isShowingAddView) {
+                    AddTodoView()
+                }
+                .overlay(alignment: .bottomTrailing) {
+                    ZStack {
+                        Group {
+                            Circle()
+                                .fill(.blue)
+                                .opacity(isAnimatingButton ? 0.2 : 0)
+                                .scaleEffect(isAnimatingButton ? 1 : 0)
+                                .frame(width: 68, height: 68, alignment: .center)
+
+                            Circle()
+                                .fill(.blue)
+                                .opacity(isAnimatingButton ? 0.15 : 0)
+                                .scaleEffect(isAnimatingButton ? 1 : 0)
+                                .frame(width: 88, height: 88, alignment: .center)
+                        }
+                        .animation(.easeInOut(duration: 2).repeatForever(autoreverses: true), value: isAnimatingButton)
+
+                        Button(action: {
+                            isShowingAddView.toggle()
+                        }, label: {
+                            Image(systemName: "plus.circle.fill")
+                                .resizable()
+                                .scaledToFit()
+                                .background(Circle().fill(baseColor))
+                                .frame(width: 48, height: 48, alignment: .center)
+                        }) //: BUTTON
+                            .onAppear {
+                                isAnimatingButton.toggle()
+                            }
+                    } //: ZSTACK
+                    .padding([.bottom, .trailing], 15)
+                }
                 .navigationTitle("TODO")
                 .navigationBarTitleDisplayMode(.inline)
-
-                // MARK: - EMPTY TODOS
-
-                if todos.isEmpty {
-                    EmptyListView()
-                }
-            } //: ZSTACK
         } //: NAVIGATION
     }
 
+    // MARK: - VIEWS
+
+    @ViewBuilder
+    private var listView: some View {
+        if todos.isEmpty {
+            EmptyListView()
+        } else {
+            List {
+                ForEach(todos) { todo in
+                    HStack {
+                        Text(todo.name ?? "Unknown")
+                        Spacer()
+                        Text(todo.priority ?? "Unknown")
+                    }
+                } //: LOOP
+                .onDelete(perform: deleteItems)
+            } //: LIST
+        }
+    }
+
     // MARK: - HELPERS
+
 
     private func deleteItems(offsets: IndexSet) {
         withAnimation {

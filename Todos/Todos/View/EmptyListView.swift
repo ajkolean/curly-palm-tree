@@ -10,7 +10,7 @@ struct EmptyListView: View {
         "illustration-no2",
         "illustration-no3"
     ]
-
+    
     let tips = [
         "Use your time wisely.",
         "Slow and stedy wins the race.",
