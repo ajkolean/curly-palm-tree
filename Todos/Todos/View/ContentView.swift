@@ -3,6 +3,11 @@ import CoreData
 
 struct ContentView: View {
     // MARK: - PROPERTIES
+    @AppStorage("theme")
+    private var theme: Int = 0
+
+    let themes = themeData
+
     @Environment(\.managedObjectContext) private var viewContext
 
     @FetchRequest(
@@ -34,6 +39,8 @@ struct ContentView: View {
                             }
                     }
                 }
+                .tint(themes[theme].color)
+
                 .sheet(isPresented: $isShowingAddView) {
                     AddTodoView()
                 }
@@ -41,13 +48,13 @@ struct ContentView: View {
                     ZStack {
                         Group {
                             Circle()
-                                .fill(.blue)
+                                .fill(themes[theme].color)
                                 .opacity(isAnimatingButton ? 0.2 : 0)
                                 .scaleEffect(isAnimatingButton ? 1 : 0)
                                 .frame(width: 68, height: 68, alignment: .center)
 
                             Circle()
-                                .fill(.blue)
+                                .fill(themes[theme].color)
                                 .opacity(isAnimatingButton ? 0.15 : 0)
                                 .scaleEffect(isAnimatingButton ? 1 : 0)
                                 .frame(width: 88, height: 88, alignment: .center)
@@ -72,6 +79,8 @@ struct ContentView: View {
                 .navigationTitle("TODO")
                 .navigationBarTitleDisplayMode(.inline)
         } //: NAVIGATION
+        .tint(themes[theme].color)
+        .navigationViewStyle(.stack)
     }
 
     // MARK: - VIEWS
@@ -84,10 +93,26 @@ struct ContentView: View {
             List {
                 ForEach(todos) { todo in
                     HStack {
+                        Circle()
+                            .frame(width: 12, height: 12, alignment: .center)
+                            .foregroundColor(colorize(priority: todo.priority ?? "Normal"))
+
                         Text(todo.name ?? "Unknown")
+                            .fontWeight(.semibold)
+
                         Spacer()
+
                         Text(todo.priority ?? "Unknown")
-                    }
+                            .font(.footnote)
+                            .foregroundColor(Color(uiColor: .systemGray2))
+                            .padding(3)
+                            .frame(minWidth: 62)
+                            .overlay {
+                                Capsule()
+                                    .stroke(Color(uiColor: .systemGray2), lineWidth: 0.75)
+                            }
+                    } //: HSTACK
+                    .padding(.vertical, 10)
                 } //: LOOP
                 .onDelete(perform: deleteItems)
             } //: LIST
@@ -95,7 +120,6 @@ struct ContentView: View {
     }
 
     // MARK: - HELPERS
-
 
     private func deleteItems(offsets: IndexSet) {
         withAnimation {
@@ -107,6 +131,19 @@ struct ContentView: View {
                 let nsError = error as NSError
                 fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
             }
+        }
+    }
+
+    private func colorize(priority: String) -> Color {
+        switch priority {
+        case "High":
+            return .pink
+        case "Normal":
+            return .green
+        case "Low":
+            return .blue
+        default:
+            return .gray
         }
     }
 }

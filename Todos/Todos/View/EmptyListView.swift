@@ -2,6 +2,9 @@ import SwiftUI
 
 struct EmptyListView: View {
     // MARK: - PROPERTIES
+    @AppStorage("theme")
+    private var theme: Int = 0
+    let themes = themeData
 
     @State private var isAnimating = false
 
@@ -26,6 +29,7 @@ struct EmptyListView: View {
         ZStack {
             VStack(alignment: .center, spacing: 20) {
                 Image(images.randomElement() ?? images[0])
+                    .renderingMode(.template)
                     .resizable()
                     .scaledToFit()
                     .frame(
@@ -38,9 +42,12 @@ struct EmptyListView: View {
                         alignment: .center
                     )
                     .layoutPriority(1)
+                    .foregroundColor(themes[theme].color)
+
                 Text(tips.randomElement() ?? tips[0])
                     .layoutPriority(0.5)
                     .font(.system(.headline, design: .rounded))
+                    .foregroundColor(themes[theme].color)
 
             } //: VSTACK
             .padding(.horizontal)

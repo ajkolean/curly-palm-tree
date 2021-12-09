@@ -29,6 +29,8 @@
 		FFF0616127620E5900BA852D /* Blue Light.png in Resources */ = {isa = PBXBuildFile; fileRef = FFF0615827620E5900BA852D /* Blue Light.png */; };
 		FFF0616227620E5900BA852D /* Green Dark.png in Resources */ = {isa = PBXBuildFile; fileRef = FFF0615927620E5900BA852D /* Green Dark.png */; };
 		FFF061642762126500BA852D /* IconNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF061632762126500BA852D /* IconNames.swift */; };
+		FFF061672762243000BA852D /* ThemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF061662762243000BA852D /* ThemeModel.swift */; };
+		FFF061692762245A00BA852D /* ThemeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF061682762245A00BA852D /* ThemeData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,8 @@
 		FFF0615827620E5900BA852D /* Blue Light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Blue Light.png"; sourceTree = "<group>"; };
 		FFF0615927620E5900BA852D /* Green Dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Green Dark.png"; sourceTree = "<group>"; };
 		FFF061632762126500BA852D /* IconNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconNames.swift; sourceTree = "<group>"; };
+		FFF061662762243000BA852D /* ThemeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeModel.swift; sourceTree = "<group>"; };
+		FFF061682762245A00BA852D /* ThemeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,7 @@
 		FF09B5A0275F98AE00F0373D /* Todos */ = {
 			isa = PBXGroup;
 			children = (
+				FFF061652762242600BA852D /* Theme */,
 				FFF0615027620E2300BA852D /* Icons */,
 				FFCC53CD2760CD67004DA542 /* Utility */,
 				FFCC53CA2760CA03004DA542 /* Info.plist */,
@@ -145,6 +150,15 @@
 				FFF0615727620E5800BA852D /* Pink.png */,
 			);
 			path = Icons;
+			sourceTree = "<group>";
+		};
+		FFF061652762242600BA852D /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				FFF061662762243000BA852D /* ThemeModel.swift */,
+				FFF061682762245A00BA852D /* ThemeData.swift */,
+			);
+			path = Theme;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,8 +241,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF09B5AB275F98B000F0373D /* Persistence.swift in Sources */,
+				FFF061692762245A00BA852D /* ThemeData.swift in Sources */,
 				FFCC53D12760E09B004DA542 /* SettingsView.swift in Sources */,
 				FF09B5A4275F98AF00F0373D /* ContentView.swift in Sources */,
+				FFF061672762243000BA852D /* ThemeModel.swift in Sources */,
 				FFCC53CC2760CB63004DA542 /* EmptyListView.swift in Sources */,
 				FFF061642762126500BA852D /* IconNames.swift in Sources */,
 				FFCC53D32760E2F8004DA542 /* FormRowStaticView.swift in Sources */,

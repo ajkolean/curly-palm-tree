@@ -3,8 +3,13 @@ import SwiftUI
 struct SettingsView: View {
     // MARK: - PROPERTIES
 
+    @AppStorage("theme")
+    private var theme: Int = 0
+
     @Environment(\.presentationMode) private var presentationMode
     @EnvironmentObject var iconSettings: IconNames
+
+    let themes = themeData
 
     // MARK: - BODY
     var body: some View {
@@ -65,6 +70,32 @@ struct SettingsView: View {
                     }) //: SECTION 1
                         .padding(.vertical, 3)
 
+
+                    // MARK: - SECTION 2
+                    Section(content: {
+                        ForEach(themes) { item in
+                            Button(action: {
+                                theme = item.id
+                            }, label: {
+                                HStack {
+                                    Image(systemName: "circle.fill")
+                                        .foregroundColor(item.color)
+                                    Text(item.name)
+                                }
+                            }) //: BUTTON
+                                .tint(.primary)
+                        }
+                    }, header: {
+                        HStack {
+                            Text("Choose the app theme")
+                            Image(systemName: "circle.fill")
+                                .resizable()
+                                .frame(width: 10, height: 10)
+                                .foregroundColor(themes[theme].color)
+                        }
+                    }) //: SECTION 2
+                        .padding(.vertical, 3)
+
                     // MARK: - SECTION 3
                     Section(content: {
                         FormRowLinkView(icon: "globe", color: .pink, text: "Website", link: "https://swiftuimasterclass.com")
@@ -74,7 +105,6 @@ struct SettingsView: View {
                         Text("Follow use on social media")
                     }) //: SECTION 3
                         .padding(.vertical, 3)
-
 
                     // MARK: - SECTION 4
                     Section(content: {
@@ -110,6 +140,8 @@ struct SettingsView: View {
             .navigationTitle("Settings")
             .navigationBarTitleDisplayMode(.inline)
         } //: NAVIGATION
+        .tint(themes[theme].color)
+        .navigationViewStyle(.stack)
     }
 }
 

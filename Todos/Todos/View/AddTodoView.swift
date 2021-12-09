@@ -4,6 +4,11 @@ import CoreData
 struct AddTodoView: View {
     // MARK: - PROPERTIES
 
+    @AppStorage("theme")
+    private var theme: Int = 0
+
+    let themes = themeData
+
     @Environment(\.managedObjectContext) private var viewContext
     @Environment(\.presentationMode) private var presentationMode
 
@@ -45,7 +50,7 @@ struct AddTodoView: View {
                             .font(.system(size: 24, weight: .bold, design: .default))
                             .padding()
                             .frame(minWidth: 0, maxWidth: .infinity)
-                            .background(.blue)
+                            .background(themes[theme].color)
                             .cornerRadius(9)
                             .foregroundColor(.white)
                     }) //: BUTTON
@@ -73,6 +78,8 @@ struct AddTodoView: View {
                 )
             }
         } //: NAV
+        .tint(themes[theme].color)
+        .navigationViewStyle(.stack)
     }
 
     // MARK: - HELPERS
