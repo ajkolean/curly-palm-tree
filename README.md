@@ -35,6 +35,9 @@ A collection of practice Apps using SwiftUI 3
 - [Honeymoon App](#honeymoon-app)
   - [Featured Objectives](#featured-objectives-8)
   - [Preview](#preview-8)
+- [Todos App](#todos-app)
+  - [Featured Objectives](#featured-objectives-9)
+  - [Preview](#preview-9)
 
 # Restart App
 
@@ -224,3 +227,23 @@ A collection of practice Apps using SwiftUI 3
 ## Preview
 
 <img src="https://github.com/ajkolean/curly-palm-tree/blob/main/Honeymoon/honeymoonAppGif.gif" width="300" height="600" />
+
+
+# Todos App
+
+## Featured Objectives
+
+- How to develop a Todo Application with Core Data and SwiftUI 
+- How to save and retrieve data from the local database
+- How to delete data and refresh the database
+- How to display peace of data dynamically in a List View
+- How to improve the appearance of the Todo Form with SwiftUI
+- Show an image and a quote when there is no todo item in the List
+- How to create an advanced Settings View
+- Learn how to open external website link with SwiftUI
+- Develop a new feature: iOS Alternate App Icons with SwiftUI
+- Develop a new feature: App Themes with SwiftUI
+
+## Preview
+
+<img src="https://github.com/ajkolean/curly-palm-tree/blob/main/Todos/todosAppGif.gif" width="300" height="600" />
