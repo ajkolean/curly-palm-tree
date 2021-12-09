@@ -19,6 +19,16 @@
 		FFCC53D12760E09B004DA542 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCC53D02760E09B004DA542 /* SettingsView.swift */; };
 		FFCC53D32760E2F8004DA542 /* FormRowStaticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCC53D22760E2F8004DA542 /* FormRowStaticView.swift */; };
 		FFCC53D52760E761004DA542 /* FormRowLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCC53D42760E761004DA542 /* FormRowLinkView.swift */; };
+		FFF0615A27620E5900BA852D /* Blue.png in Resources */ = {isa = PBXBuildFile; fileRef = FFF0615127620E5700BA852D /* Blue.png */; };
+		FFF0615B27620E5900BA852D /* Green.png in Resources */ = {isa = PBXBuildFile; fileRef = FFF0615227620E5700BA852D /* Green.png */; };
+		FFF0615C27620E5900BA852D /* Blue Dark.png in Resources */ = {isa = PBXBuildFile; fileRef = FFF0615327620E5700BA852D /* Blue Dark.png */; };
+		FFF0615D27620E5900BA852D /* Pink Dark.png in Resources */ = {isa = PBXBuildFile; fileRef = FFF0615427620E5800BA852D /* Pink Dark.png */; };
+		FFF0615E27620E5900BA852D /* Green Light.png in Resources */ = {isa = PBXBuildFile; fileRef = FFF0615527620E5800BA852D /* Green Light.png */; };
+		FFF0615F27620E5900BA852D /* Pink Light.png in Resources */ = {isa = PBXBuildFile; fileRef = FFF0615627620E5800BA852D /* Pink Light.png */; };
+		FFF0616027620E5900BA852D /* Pink.png in Resources */ = {isa = PBXBuildFile; fileRef = FFF0615727620E5800BA852D /* Pink.png */; };
+		FFF0616127620E5900BA852D /* Blue Light.png in Resources */ = {isa = PBXBuildFile; fileRef = FFF0615827620E5900BA852D /* Blue Light.png */; };
+		FFF0616227620E5900BA852D /* Green Dark.png in Resources */ = {isa = PBXBuildFile; fileRef = FFF0615927620E5900BA852D /* Green Dark.png */; };
+		FFF061642762126500BA852D /* IconNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF061632762126500BA852D /* IconNames.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +46,16 @@
 		FFCC53D02760E09B004DA542 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		FFCC53D22760E2F8004DA542 /* FormRowStaticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormRowStaticView.swift; sourceTree = "<group>"; };
 		FFCC53D42760E761004DA542 /* FormRowLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormRowLinkView.swift; sourceTree = "<group>"; };
+		FFF0615127620E5700BA852D /* Blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Blue.png; sourceTree = "<group>"; };
+		FFF0615227620E5700BA852D /* Green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Green.png; sourceTree = "<group>"; };
+		FFF0615327620E5700BA852D /* Blue Dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Blue Dark.png"; sourceTree = "<group>"; };
+		FFF0615427620E5800BA852D /* Pink Dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pink Dark.png"; sourceTree = "<group>"; };
+		FFF0615527620E5800BA852D /* Green Light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Green Light.png"; sourceTree = "<group>"; };
+		FFF0615627620E5800BA852D /* Pink Light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pink Light.png"; sourceTree = "<group>"; };
+		FFF0615727620E5800BA852D /* Pink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pink.png; sourceTree = "<group>"; };
+		FFF0615827620E5900BA852D /* Blue Light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Blue Light.png"; sourceTree = "<group>"; };
+		FFF0615927620E5900BA852D /* Green Dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Green Dark.png"; sourceTree = "<group>"; };
+		FFF061632762126500BA852D /* IconNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconNames.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +88,7 @@
 		FF09B5A0275F98AE00F0373D /* Todos */ = {
 			isa = PBXGroup;
 			children = (
+				FFF0615027620E2300BA852D /* Icons */,
 				FFCC53CD2760CD67004DA542 /* Utility */,
 				FFCC53CA2760CA03004DA542 /* Info.plist */,
 				FF09B5A1275F98AF00F0373D /* TodosApp.swift */,
@@ -105,8 +126,25 @@
 			isa = PBXGroup;
 			children = (
 				FFCC53CE2760CD72004DA542 /* Constants.swift */,
+				FFF061632762126500BA852D /* IconNames.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		FFF0615027620E2300BA852D /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				FFF0615327620E5700BA852D /* Blue Dark.png */,
+				FFF0615827620E5900BA852D /* Blue Light.png */,
+				FFF0615127620E5700BA852D /* Blue.png */,
+				FFF0615927620E5900BA852D /* Green Dark.png */,
+				FFF0615527620E5800BA852D /* Green Light.png */,
+				FFF0615227620E5700BA852D /* Green.png */,
+				FFF0615427620E5800BA852D /* Pink Dark.png */,
+				FFF0615627620E5800BA852D /* Pink Light.png */,
+				FFF0615727620E5800BA852D /* Pink.png */,
+			);
+			path = Icons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,8 +205,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFF0616227620E5900BA852D /* Green Dark.png in Resources */,
+				FFF0616027620E5900BA852D /* Pink.png in Resources */,
+				FFF0615E27620E5900BA852D /* Green Light.png in Resources */,
+				FFF0615D27620E5900BA852D /* Pink Dark.png in Resources */,
+				FFF0616127620E5900BA852D /* Blue Light.png in Resources */,
+				FFF0615A27620E5900BA852D /* Blue.png in Resources */,
+				FFF0615F27620E5900BA852D /* Pink Light.png in Resources */,
+				FFF0615B27620E5900BA852D /* Green.png in Resources */,
 				FF09B5A9275F98B000F0373D /* Preview Assets.xcassets in Resources */,
 				FF09B5A6275F98B000F0373D /* Assets.xcassets in Resources */,
+				FFF0615C27620E5900BA852D /* Blue Dark.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,6 +230,7 @@
 				FFCC53D12760E09B004DA542 /* SettingsView.swift in Sources */,
 				FF09B5A4275F98AF00F0373D /* ContentView.swift in Sources */,
 				FFCC53CC2760CB63004DA542 /* EmptyListView.swift in Sources */,
+				FFF061642762126500BA852D /* IconNames.swift in Sources */,
 				FFCC53D32760E2F8004DA542 /* FormRowStaticView.swift in Sources */,
 				FFCC53D52760E761004DA542 /* FormRowLinkView.swift in Sources */,
 				FF09B5A2275F98AF00F0373D /* TodosApp.swift in Sources */,
