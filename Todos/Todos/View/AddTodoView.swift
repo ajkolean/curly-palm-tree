@@ -92,6 +92,7 @@ struct AddTodoView: View {
             return
         }
         let todo = Todo(context: viewContext)
+        todo.id = UUID()
         todo.name = name
         todo.priority = priority
         do {
