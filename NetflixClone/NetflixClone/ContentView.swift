@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  NetflixClone
-//
-//  Created by Andy Kolean on 12/13/21.
-//
-
 import SwiftUI
 
 struct ContentView: View {
