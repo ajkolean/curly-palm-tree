@@ -17,6 +17,7 @@
 		FFD273A82767815900103BA2 /* StandardHomeMovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD273A72767815900103BA2 /* StandardHomeMovieView.swift */; };
 		FFD273AA2767819D00103BA2 /* GlobalHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD273A92767819D00103BA2 /* GlobalHelpers.swift */; };
 		FFD273AC2767833900103BA2 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD273AB2767833900103BA2 /* HomeViewModel.swift */; };
+		FFD273AE276788E500103BA2 /* TopMoviePreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD273AD276788E500103BA2 /* TopMoviePreviewView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		FFD273A72767815900103BA2 /* StandardHomeMovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardHomeMovieView.swift; sourceTree = "<group>"; };
 		FFD273A92767819D00103BA2 /* GlobalHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalHelpers.swift; sourceTree = "<group>"; };
 		FFD273AB2767833900103BA2 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		FFD273AD276788E500103BA2 /* TopMoviePreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMoviePreviewView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				FFD273A72767815900103BA2 /* StandardHomeMovieView.swift */,
 				FFD273A92767819D00103BA2 /* GlobalHelpers.swift */,
 				FFD273AB2767833900103BA2 /* HomeViewModel.swift */,
+				FFD273AD276788E500103BA2 /* TopMoviePreviewView.swift */,
 			);
 			path = NetflixClone;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 				FFD273A127677EE200103BA2 /* HomeView.swift in Sources */,
 				FFD273AC2767833900103BA2 /* HomeViewModel.swift in Sources */,
 				FFD2739527677DCB00103BA2 /* ContentView.swift in Sources */,
+				FFD273AE276788E500103BA2 /* TopMoviePreviewView.swift in Sources */,
 				FFD273A62767810300103BA2 /* Movie.swift in Sources */,
 				FFD2739327677DCB00103BA2 /* NetflixCloneApp.swift in Sources */,
 				FFD273A82767815900103BA2 /* StandardHomeMovieView.swift in Sources */,
